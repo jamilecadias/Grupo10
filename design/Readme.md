@@ -1,3 +1,4 @@
+Colores logo
 marron:
 HEX : #5e5340
 RGB : 94, 83, 64
