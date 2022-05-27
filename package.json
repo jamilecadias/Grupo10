@@ -1,12 +1,23 @@
 {
   "name": "proyectointegrador",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Coffea shop es una tienda online que ofrece al consumidor tres variedades de café provenientes de los países que lideran el ranking de los mayores productores del mundo: Brasil, Vietnam y Colombia.",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamilecadias/grupo_10_coffea.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamilecadias/grupo_10_coffea/issues"
+  },
+  "homepage": "https://github.com/jamilecadias/grupo_10_coffea#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
