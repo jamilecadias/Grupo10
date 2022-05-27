@@ -1,3 +1,42 @@
 header{
-    background-color: rgba(94, 83, 64);
+    background-color: rgba(94, 83, 64, 0.95);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+        
+}
+header .form{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+}
+header .form .input{
+    display: flex;
+    background-color: #FFF;  
+    width: 40vw;  
+    outline: none;
+    color: #666;
+    padding: 2px;
+    border-radius: 5px;
+    align-self: center;
+}
+header .form .submit{
+    display: flex;
+    background-color: #FFF;
+    color: #666;
+    width: 10%;
+    border-radius: 5px;
+    align-self: center;
+}
+.inicio{
+    display: flex;
+    flex-direction: row;
+}
+.inicio a{
+    margin: 15px;
+    color: white;
+}
+.inicio i{
+    color: white;
 }
