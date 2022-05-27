@@ -3,7 +3,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-        
+    font-family: 'Montserrat', sans-serif;    
 }
 header .form{
     display: flex;
@@ -23,10 +23,10 @@ header .form .input{
 }
 header .form .submit{
     display: flex;
-    background-color: #FFF;
-    color: #666;
-    width: 10%;
-    border-radius: 5px;
+    background-color: rgba(94, 83, 64, 0.95);
+    color: white;
+    width: 10vw;
+    margin: 10px;
     align-self: center;
 }
 .inicio{
@@ -36,6 +36,7 @@ header .form .submit{
 .inicio a{
     margin: 15px;
     color: white;
+    text-decoration: none;
 }
 .inicio i{
     color: white;
@@ -46,7 +47,7 @@ footer {
     color:white;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-   }
+}
 .direccion {
     font-size: 15px;
     width: 70vw;
