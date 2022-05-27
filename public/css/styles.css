@@ -40,3 +40,28 @@ header .form .submit{
 .inicio i{
     color: white;
 }
+
+footer {
+    background-color: rgba(94, 83, 64, 0.95);
+    color:white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+   }
+.direccion {
+    font-size: 15px;
+    width: 70vw;
+    margin: auto;
+    padding: 15px;
+    
+}
+    footer a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+
+.enlaces_footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 8px;
+}
