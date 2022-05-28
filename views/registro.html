@@ -35,10 +35,37 @@
         <h1>Crear cuenta</h1>
         <p>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>
         <br>
+    </div>
         <form>
             <fieldset>
                 <div>
-                    <label for="Nombre"></label>
+                    <form action="registro.html" method="POST"></form>
+                   <p>
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+      </p>
+
+      <p>
+        <label>E-mail:</label>
+        <input type="email" name="email" required>
+      </p>
+      <p>
+        <label>Telefono(opcional):</label>
+        <input type="tel" name="tel">
+      </p>
+  
+        <p>
+          <label>Contraseña:</label>
+          <input type="password" name="password" required>
+        </p>
+        <p>
+            <label>Confirmar contraseña:</label>
+            <input type="password" name="password" required>
+          </p>
+  
+        <p>
+          <input type="submit" value="ENVIAR">
+        </p>
                 </div>
             </fieldset>
         </form>
