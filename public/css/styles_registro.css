@@ -1,0 +1,114 @@
+header{
+    background-color: rgba(94, 83, 64, 0.95);
+    font-family: 'Montserrat', sans-serif; 
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+    /* width: 100vw;    */
+}
+.logo {
+    text-align: center;
+}
+.logo img{
+width: 20vw;
+}
+header .form{
+    display: flex;
+    flex-direction: row;
+    text-align: center;    
+}
+header .form .input{
+    display: flex;
+    background-color: #FFF;  
+    width: 30vw;  
+    outline: none;
+    color: #666;
+    padding: 2px;
+    margin-top: 10px;
+    border-radius: 5px;
+    align-self: center;
+    display: none;
+}
+header .form .submit {
+    display: flex;
+    color: white;
+    /* width: 40vw; */
+    font-size: 6vw;
+    margin: 10px;
+    align-self: center;    
+}
+.inicio{
+    display: flex;
+    flex-direction: row;        
+}
+.inicio a{
+    display: flex;
+    margin: 15px;
+    color: white;    
+    text-decoration: none;
+    display: none;
+}
+.carrito{
+    display: flex;
+    align-items: center;
+    font-size: 6vw;
+}
+.carrito a{
+    color: white;       
+}
+div.burger-menu{
+    text-align: center;
+    align-self: center;
+}
+
+div.burger-menu i{
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 20px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 20px;
+}
+@media(min-width: 480px){   
+.logo img{ width: 6vw;}
+div.burger-menu{ display: none;} 
+header .form{display: flex;}
+header .form .input{ 
+    display: flex;    
+}
+.inicio a{display: flex;}
+header .form .submit { 
+    font-size: 2vw;
+}
+.carrito{
+    font-size: 2vw;
+}
+}
+
+
+footer {
+    background-color: rgba(94, 83, 64, 0.95);
+    color:white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.direccion {
+    font-size: 15px;
+    width: 70vw;
+    margin: auto;
+    padding: 15px;
+    
+}
+    footer a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+
+.enlaces_footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 8px;
+}

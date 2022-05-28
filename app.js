@@ -8,7 +8,7 @@ app.use(express.static(publicPath));
 app.get('/', (req, res)=>{
     res.sendFile (path.join(__dirname,'/views/home.html'))
 });
-app.get('/', (req, res)=>{
+app.get('/registro', (req, res)=>{
     res.sendFile (path.join(__dirname,'/views/registro.html'))
 });
 app.listen (3000, (req, res)=> console.log ('Servidor 3000 funcionando'));
