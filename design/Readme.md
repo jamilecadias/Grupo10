@@ -19,3 +19,6 @@ marron claro:
 HEX : #8c6f2b
 RGB : 140, 111, 43
 HSL  : 42, 53%, 35%
+
+Otros colores
+#F5ECCE //color fila datos de carrito de compras
