@@ -1,6 +1,5 @@
 header{
     background-color: rgba(94, 83, 64, 0.95);
-    font-family: 'Montserrat', sans-serif; 
     display: flex;
     justify-content: space-around;
     padding: 10px;
@@ -86,7 +85,83 @@ header .form .submit {
     font-size: 2vw;
 }
 }
+/*Formulario de registro de la página_header*/
+#titulo {
+    color: #2c3425;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
+#subtitulo {
+    color: #2c3425;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+main {
+    align-items: center;
+}
+
+.create-form {
+    padding: 20 px 15px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campo {
+    margin-bottom: 5px;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.campo label{
+    margin-bottom: 0.2em;
+    color: #2c3425;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+}
+
+input{
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+    
+.campo input:focus, .campo select:focus {
+    background: rgb(173, 231, 250);
+    border:1px solid #2090e6; ;
+}
+.boton {
+    background: #5e5340;
+    border:0; 
+    font-size: 15px;
+    margin-bottom: 1em;
+    color: white;
+    padding: 0.2em 0.6em;
+    border-radius: 5px;
+    align-items: center;
+  
+
+    
+
+}
+.boton:hover {
+    background: #8c6f2b;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;
+    
+}
+
+/*Formulario de registro de la página_Footer*/
 
 footer {
     background-color: rgba(94, 83, 64, 0.95);

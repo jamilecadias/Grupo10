@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi cuenta - Coffea</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles_registro.css">
-    <title>Mi cuenta - Coffea</title>
+    <script src="https://kit.fontawesome.com/09a65808e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <header>
+     <header>
         <div class="logo">
             <img src="images/Logo_coffea2.png" alt="Logo Coffea Shop">
         </div>
@@ -22,7 +24,8 @@
                 <a href="#">INICIO </a>
                 <a href="#">NOSOTROS </a>
                 <a href="#">REGISTRATE </a>
-                <a href="#">INGRESAR  </a>                                                                  
+                <a href="#">INGRESAR  </a>    
+
         </div>
         <div class="carrito">
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -31,48 +34,52 @@
             <i class="fa fa-bars burger"></i>
         </div>
     </header>
-
-    <div>
-        <h1>Crear cuenta</h1>
-        <p>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>
+   
+   
+    <!--formulario de registro de la pagina     <fieldset class="grupo"> </fieldset>--> 
+   
+    <form action="registro.html" method="POST" class="create-form"> 
+        <fieldset>  
+            <main>
+            <div>
+        <h1 id="titulo">Crear cuenta</h1>
+        <p id="subtitulo">Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>
         <br>
     </div>
-        <form>
-            <fieldset>
-                <div>
-                    <form action="registro.html" method="POST"></form>
-                   <p>
-        <label>Nombre:</label>
-        <input type="text" name="nombre" required>
-      </p>
+       
+       <div class="campo"> 
+        <label for="nombre"><strong>Nombre:</strong></label>
+        <input type="text" name="nombre" id="nombre" required>
+    </div>
+    
+     <div class="campo">
+        <label for="email"><strong>E-mail:</strong></label>
+        <input type="email" name="email" id="email" required>
+      </div>
 
-      <p>
-        <label>E-mail:</label>
-        <input type="email" name="email" required>
-      </p>
-      <p>
-        <label>Telefono(opcional):</label>
-        <input type="tel" name="tel">
-      </p>
-  
-        <p>
-          <label>Contraseña:</label>
-          <input type="password" name="password" required>
-        </p>
-        <p>
-            <label>Confirmar contraseña:</label>
-            <input type="password" name="password" required>
-          </p>
-  
-        <p>
-          <input type="submit" value="ENVIAR">
-        </p>
-                </div>
-            </fieldset>
+      <div class="campo">
+        <label for="telefono"><strong>Telefono (opcional):</strong></label>
+        <input type="tel" name="tel" id="telefono">
+      </div>
+
+      <div class="campo">
+          <label for="contraseña"><strong>Contraseña:</strong></label>
+          <input type="password" name="password" id="contraseña" required>
+       </div>
+
+       <div class="campo">
+            <label for="contraseña"><strong>Confirmar contraseña:</strong></label>
+            <input type="password" name="password" id="contraseña"required>
+        </div>
+        <br>
+        <button  type="submit" class="boton">CREAR CUENTA</button>
+    </main>
+    </fieldset>
         </form>
 
-    </div>
-    <br>
+        <!--formulario de registro de la pagina -->
+
+
     <footer>
         <div class="direccion">
             <a>Calle Falsa 1234 | CP (4321) | Barrio Inexistente | Provincia Ficticia | País Inventado</a>
