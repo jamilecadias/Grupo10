@@ -1,0 +1,16 @@
+main .iniciar-sesion {
+    text-align: center;
+
+}
+section.form-login 
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 33%;
+    padding: 15px;
+    border: 4px red dotted;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+    

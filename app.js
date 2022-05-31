@@ -16,4 +16,9 @@ app.get('/iconoCarrito', (req, res)=>{
     res.sendFile (path.join(__dirname,'/views/carrito.html'))
 }
 )
+
+app.get('/login', (req, res)=>{
+    res.sendFile (path.join(__dirname,'/views/login.html'))
+}
+)
 app.listen (3000, (req, res)=> console.log ('Servidor 3000 funcionando'));
