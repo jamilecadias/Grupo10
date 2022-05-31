@@ -1,0 +1,63 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+main .iniciar-sesion {
+    text-align: center;
+
+}
+section.form-login 
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 40%;
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+    max-width: 400px;
+    background-color: #fef9f2;
+    border: dotted 1px;
+    margin-bottom: 50px;
+    margin-top: 20px
+}
+    
+.iniciar-sesion {
+    color: #2c3425;
+    margin-top: 20px;
+
+}
+
+
+span.error {
+    width: 90%;
+    text-align: justify;
+}
+
+label{
+    width: 90%;
+        
+}
+
+
+input{
+    width: 95%
+}
+
+div.control-form {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
+    
+}
+
+.create-form .boton {
+    border: 4px ;
+   
+}
+
