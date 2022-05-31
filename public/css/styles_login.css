@@ -6,11 +6,43 @@ section.form-login
 {
     display: flex;
     box-sizing: border-box;
-    width: 33%;
+    width: 40%;
     padding: 15px;
-    border: 4px red dotted;
     flex-direction: column;
     text-align: center;
     margin: auto;
+    flex-wrap: wrap;
+    max-width: 400px;
 }
     
+
+
+span.error {
+    width: 90%;
+    text-align: left;
+}
+
+label{
+    width: 90%
+    
+}
+
+
+input{
+    width: 95%
+}
+
+div.control-form {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap
+}
+
+.create-form .boton {
+    border: 4px red dotted;
+   
+}
+
