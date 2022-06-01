@@ -1,0 +1,18 @@
+main{
+    width: 90%;
+    margin: auto;
+}
+.calificacion{
+    margin: 15px;
+    color:  #8c6f2b;
+}
+.descripcion{
+    margin: 20px;
+    width: 90%;
+    text-align: justify;
+}
+.descripcion h4{
+    text-align: center;
+    margin: 15px;
+}
+
