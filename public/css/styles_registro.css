@@ -185,5 +185,5 @@ footer {
 .enlaces_footer {
     display: flex;
     justify-content: space-around;
-    font-size: 8px;
+    font-size: 12px;
 }

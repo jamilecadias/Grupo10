@@ -8,6 +8,11 @@ app.use(express.static(publicPath));
 app.get('/', (req, res)=>{
     res.sendFile (path.join(__dirname,'/views/home.html'))
 });
+
+app.get('/div.logo', (req, res)=>{
+    res.sendFile (path.join(__dirname,'/views/home.html'))
+})
+
 app.get('/registro', (req, res)=>{
     res.sendFile (path.join(__dirname,'/views/registro.html'))
 });
