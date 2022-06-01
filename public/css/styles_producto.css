@@ -2,9 +2,17 @@ main{
     width: 90%;
     margin: auto;
 }
+#imagenproducto{
+    width: 100%;
+}
 .calificacion{
     margin: 15px;
     color:  #8c6f2b;
+}
+.precio{
+    font-size: 24px;
+    font-weight: 600;
+    color:#728f63;
 }
 .descripcion{
     margin: 20px;
@@ -15,4 +23,58 @@ main{
     text-align: center;
     margin: 15px;
 }
+.opciones{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin: 15px;
+    justify-content: center;
+}
+.opciones label{
+    font-weight: bold;
+    width: 40%;
+    margin:10px;
+}
+select{
+    width: 40%;
+    margin: 10px;
+    font-weight: 400;
+}
+button{
+    margin: 20px;
+    padding: 15px;
+    font-weight: bold;
+    background-color: rgba(94, 83, 64, 0.9);
+    color: white;    
+}
+.comentario{
+    display: flex;
+    flex-wrap: wrap;      
+}
+.comentario label{
+    text-align: right;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
+}
+textarea{
+    width: 85%;
+    margin:auto;     
+}
+.comentario button{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.producto1{
+    width: fit-content;
+    width: 100%;
+}
+.producto2{
+display: none;
+}
+main .imgproducto1{
+    width: 40%;
+}
