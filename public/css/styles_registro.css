@@ -1,3 +1,7 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
 header{
     background-color: rgba(94, 83, 64, 0.95);
     display: flex;
@@ -89,78 +93,104 @@ header .form .submit {
 #titulo {
     color: #2c3425;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
     font-weight: bold;
+    font-style: normal;
+
 }
 
 #subtitulo {
     color: #2c3425;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+
 }
 main {
     align-items: center;
 }
+fieldset {
+    background-color: #fef9f2;
+    display: flex;
+    width: 40%;
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+    max-width: 400px;
+    border: dotted 1px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-weight: 500;
+
+}
 
 .create-form {
-    padding: 20 px 15px;
-}
-
-main form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.campo {
+    padding: 20 px 15px; 
     margin-bottom: 5px;
     font-style: italic;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
 }
+
+
 .campo label{
-    margin-bottom: 0.2em;
-    color: #2c3425;
-    display: block;
-    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: #2c3425; 
+    text-align: left;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
     border-radius: 5px;
 }
 
-input{
+.campo input{
+    padding: 6px 12px;
     display: block;
-    text-align: center;
+    text-align: left;
     border-radius: 5px;
+    width: 95%;
+
     
 }
-    
-.campo input:focus, .campo select:focus {
-    background: rgb(173, 231, 250);
-    border:1px solid #2090e6; ;
+
+span.error {
+    width: 90%;
+    text-align:left;
+    font-size: 15px;
 }
-.boton {
-    background: #5e5340;
+    
+.create-form input:focus, .campo :focus {
+    background: rgb(240, 243, 245);
+    border:1px solid #2090e6; 
+}
+.create-form .boton {
+    background: #728f63 ;
     border:0; 
     font-size: 15px;
-    margin-bottom: 1em;
+    margin: 15px ;
     color: white;
     padding: 0.2em 0.6em;
     border-radius: 5px;
-    align-items: center;
-  
-
-    
+    font-weight: 500;
 
 }
 .boton:hover {
-    background: #8c6f2b;
+    background: #a7c697;
     box-shadow: inset2px 2px 2px rgba(0,0,0.2);
     text-shadow: none;
     
 }
 
+.sesion {
+   display: flex;
+   justify-content: center;
+
+}
+ 
 /*Formulario de registro de la página_Footer*/
 
 footer {
