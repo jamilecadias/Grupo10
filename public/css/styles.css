@@ -26,7 +26,7 @@ header .form{
 header .form .input{
     display: flex;
     background-color: #FFF;  
-    width: 30vw;  
+    width: 100%;  
     outline: none;
     color: #666;
     padding: 2px;
@@ -37,8 +37,7 @@ header .form .input{
 }
 header .form .submit {
     display: flex;
-    color: white;
-    /* width: 40vw; */
+    color: white;    
     font-size: 6vw;
     margin: 10px;
     align-self: center;    
@@ -57,7 +56,7 @@ header .form .submit {
 .carrito{
     display: flex;
     align-items: center;
-    font-size: 6vw;
+    /* font-size: 6vw; */
 }
 .carrito a{
     color: white;       
@@ -83,18 +82,22 @@ header .form{display: flex;}
 header .form .input{ 
     display: flex;    
 }
-.inicio a{display: flex;}
+.inicio a{
+    display: flex;
+    font-size: 90%;
+    font-weight: bold;
+}
 header .form .submit { 
-    font-size: 2vw;
+    font-size: 100%;
 }
 .carrito{
-    font-size: 2vw;
+    font-size: 4;
 }
 }
 
 /*MAIN*/
 main section{
-    width: 100vw;
+    width: 90%;
     text-align: center;
     align-content: center;
     background-color: #FFF;
@@ -108,7 +111,7 @@ h2{
     text-align: center;
 }
  div img {
-     width: 50%;
+     width: 100%;
      padding: 20px;
      max-width: 380px;
  }
