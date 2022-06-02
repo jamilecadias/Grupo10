@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffea Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles_producto.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/09a65808e6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img  src="images/Logo_coffea_sinFondo.png" alt="Logo Coffea Shop">
+        </div>
+        <div class="form" action="#" method="GET">
+            <div class="input">Buscar productos, marcas y más</div>
+            <div class="submit"><i class="fa fa-search"></i></div>
+        </div>
+        </div>
+        <div class="inicio">            
+                <a href="/">INICIO </a>
+                <a href="#">NOSOTROS </a>
+                <a href="/registro">REGISTRATE </a>
+                <a href="/login">INGRESAR  </a>
+                            
+        </div>
+        <div class="carrito">
+            <a href="iconoCarrito" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+    </header>
+    <main>
+        <section id="seccion1">
+            <div id="imagen">
+                <img id="imagenproducto" src="/images/juan_valdez.jpg" alt="Café juan Valdéz">
+            </div>
+        </section>
+        <section id="seccion2">
+            <div id="detalleproducto">
+                <h1>Café Juan Valdéz Classic Colombia</h1>
+                <div class="calificacion">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>            
+                </div>
+                    <p class="precio">$5000</p>
+            </div>
+            <div>
+                <form class="opciones" action="/iconoCarrito" method="get">
+                    <label for="molienda">SELECCIONA TU MOLIENDA</label>
+                    <select name="molienda" id="molienda">
+                        <option value="Elegir una opción">Elegir una opción</option>
+                        <option value="En grano">En grano</option>
+                        <option value="Molido expresso">Molido expresso</option>
+                        <option value="Molido filtro">Molido filtro</option>
+                        <option value="Molido prensa francesa">Molido prensa francesa</option>
+                    </select>
+                    <label for="peso">SELECCIONA EL PESO</label>
+                    <select name="peso" id="peso">
+                        <option value="Elegir una opción">Elegir una opción</option>
+                        <option value="1000">1 kG</option>
+                        <option value="500">1/2 Kg</option>
+                        <option value="250">1/4 Kg</option>            
+                    </select>
+                    <button type="submit">Agregar al Carrrito</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div class="descripcion">
+                <h4>Descripción ＋</h4>
+                <P>Café liofilizado Juan Valdez es un café rico y fácil de preparar que le dará un toque cálido y tradicional a tus mañanas.</P>
+                <p>Su practicidad lo convierten en el aliado perfecto cada vez que quieras disfrutar un café con sabor tradicional y sin complicaciones.</p>
+                <p>¡Llévalo y aprovecha la calidad y sabor con los que Juan Valdez sabe sorprendernos!</p>
+            </div>
+            <div class="caracteristicas">
+                <h4>Caracteristicas ＋</h4>
+                <img id="caracteristcasimg" src="/images/Caracteristicas.PNG" alt="caracteristicas del Café">
+            </div>
+            <div class="reviews">
+                <h4>Reviews ＋</h4>
+                <form class="comentario" action="#" method="post">
+                    <label for="comentario">Deja tu comentario</label>
+                    <textarea name="comentario" id="comentario" cols="30" rows="10">Comentario</textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>       
+        <section>
+            <h3>PRODUCTOS RELACIONADOS</h3>
+            <div id="productosrelacionados">
+                <article class="producto1">
+                    <div id="productorelacionado">
+                    <a href="#"><img class="imgproducto1" src="/images/pilao.jpg"></a>
+                    </div>
+                    <div class="datos-producto">    
+                    <a href="#" class="descrpcion-pilao">Café Pilao Tradicional Brasi 500g</a>
+                    <p class="precio">$3500</p>
+                    <a href="#" class="boton">Ver más</a>
+                    </div>
+                </article>
+                <article class="producto2">
+                    <div class="imagen-cafe">
+                    <a href="#"><img src="/images/trung.jpg"></a>
+                    </div>
+                    <div class="datos-producto">
+                    <a href="#" class="descrpcion-trung">Café Trung Nguyen Premium Vietnam 425g</a>
+                    <p class="precio">$10000</p>
+                    <a href="#" class="boton">Ver más</a>
+                    </div>
+                </article>
+            </div>                          
+        </section>
+    </main>
+    <footer>
+        <div class="direccion">
+            <a>Calle Falsa 1234 | CP (4321) | Barrio Inexistente | Provincia Ficticia | País Inventado</a>
+        </div>  
+        <div class="enlaces_footer">
+            <a href="#"><i class="fa-solid fa-credit-card"></i> Medios de pago</a>
+            <a href="#"><i class="fa-solid fa-truck"></i> Envíos</a>
+            <a href="#"><i class="fa-solid fa-lock"></i> Avisos de Privacidad</a>
+            <a href="#"><i class="fa-solid fa-circle-exclamation"></i> Términos y condiciones</a>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

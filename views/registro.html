@@ -22,10 +22,10 @@
         </div>
         </div>
         <div class="inicio">            
-                <a href="#">INICIO </a>
+                <a href="/home">INICIO </a>
                 <a href="#">NOSOTROS </a>
-                <a href="#">REGISTRATE </a>
-                <a href="#">INGRESAR  </a>    
+                <a href="/registro">REGISTRATE </a>
+                <a href="/login">INGRESAR  </a>    
 
         </div>
         <div class="carrito">
@@ -36,46 +36,51 @@
         </div>
     </header>
    
-   
     <!--formulario de registro de la pagina     <fieldset class="grupo"> </fieldset>--> 
-   
+            <main>   
     <form action="registro.html" method="POST" class="create-form"> 
-        <fieldset>  
-            <main>
             <div>
         <h1 id="titulo">Crear cuenta</h1>
         <p id="subtitulo">Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>
-        <br>
     </div>
-       
+    <fieldset class="grupo">  
        <div class="campo"> 
         <label for="nombre"><strong>Nombre:</strong></label>
-        <input type="text" name="nombre" id="nombre" required>
+        <input type="text" name="nombre" id="nombre" placeholder="Ej.: Juan Valdéz"required>
     </div>
     
      <div class="campo">
         <label for="email"><strong>E-mail:</strong></label>
-        <input type="email" name="email" id="email" required>
+        <input type="email" name="email" id="email" placeholder="Ej.: tunombre@email.com" required > 
       </div>
 
       <div class="campo">
         <label for="telefono"><strong>Telefono (opcional):</strong></label>
-        <input type="tel" name="tel" id="telefono">
+        <input type="tel" name="tel" id="telefono" placeholder="Ej.: 1123456789">
       </div>
 
       <div class="campo">
           <label for="contraseña"><strong>Contraseña:</strong></label>
-          <input type="password" name="password" id="contraseña" required>
+          <input type="password" name="password" id="contraseña" placeholder="**********" required>
+          <span class="error">La contraseña debe tener al menos 8 caracteres</span>
        </div>
 
        <div class="campo">
             <label for="contraseña"><strong>Confirmar contraseña:</strong></label>
-            <input type="password" name="password" id="contraseña"required>
+            <input type="password" name="password" id="contraseña" placeholder="**********" required>
+            <span class="error">La contraseña debe ser igual a la anterior</span>
         </div>
-        <br>
+    <div>
         <button  type="submit" class="boton">CREAR CUENTA</button>
+    </div> 
+    <div>
+        <p class="sesion"> ¿Ya tenés una cuenta? </p>
+        <a href="/login">Iniciá sesión </a>
+    </div>
+
+</fieldset>
     </main>
-    </fieldset>
+   
         </form>
 
         <!--formulario de registro de la pagina -->

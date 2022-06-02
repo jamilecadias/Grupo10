@@ -14,11 +14,12 @@ app.get('/registro', (req, res)=>{
 
 app.get('/iconoCarrito', (req, res)=>{
     res.sendFile (path.join(__dirname,'/views/carrito.html'))
-}
-)
+});
 
 app.get('/login', (req, res)=>{
     res.sendFile (path.join(__dirname,'/views/login.html'))
-}
-)
+});
+app.get('/producto', (req, res)=>{
+    res.sendFile (path.join(__dirname,'/views/producto.html'))
+});
 app.listen (3000, (req, res)=> console.log ('Servidor 3000 funcionando'));
