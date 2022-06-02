@@ -25,3 +25,8 @@ El equipo que conforma el proyecto tiene como meta el diseño y desarrollo de un
 [LabCafe](https://shop.labcafe.com.ar/) - Seleccionada por el público al que apunta.
 
 [La Tienda del Cafe](https://latiendadelcafe.co/)  - Seleccionada por el tipo de negocio, con marcas de diferentes países.
+
+##TABLERO TRELLO DEL PROYECTO:
+
+https://trello.com/b/egxp8irz/coffea-grupo10
+
