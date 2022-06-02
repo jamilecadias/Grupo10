@@ -26,7 +26,8 @@ El equipo que conforma el proyecto tiene como meta el diseño y desarrollo de un
 
 [La Tienda del Cafe](https://latiendadelcafe.co/)  - Seleccionada por el tipo de negocio, con marcas de diferentes países.
 
-###TABLERO TRELLO DEL PROYECTO:
+###  TABLERO DEL PROYECTO:  
+
 
 https://trello.com/b/egxp8irz/coffea-grupo10
 
