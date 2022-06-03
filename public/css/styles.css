@@ -85,7 +85,7 @@ header .form .input{
 .inicio a{
     display: flex;
     font-size: 90%;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 header .form .submit { 
     font-size: 100%;
