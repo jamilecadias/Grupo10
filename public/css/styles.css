@@ -10,7 +10,7 @@ header{
     justify-content: space-around;
     padding: 10px;
     align-items: center;
-    /* width: 100vw;    */
+    width: 100vw;    
 }
 .logo {
     text-align: center;
