@@ -5,18 +5,32 @@
     box-sizing: border-box;
 }
 header{
-    background-color: rgba(94, 83, 64, 0.95);
+    background-color: hsl(40,15%,31.4%);
+    /* background-color: rgba(94, 83, 64, 0.95); */
     display: flex;
     justify-content: space-around;
     padding: 10px;
+    margin: auto;
     align-items: center;
-    /* width: 100vw;    */
+    width: 100vw;
 }
-.logo {
+#logo{
+    width: 7rem;
     text-align: center;
 }
-.logo img{
-width: 20vw;
+.nombre{
+    display: flex;
+    align-items: flex-end;
+}
+#coffea{
+    color: white;
+    font-size: 4rem;
+    font-family: 'Cookie', cursive;
+    font-weight: 100;
+}
+#shop{
+    color: white;
+    font-size: 1.5rem;
 }
 header .form{
     display: flex;
@@ -38,9 +52,9 @@ header .form .input{
 header .form .submit {
     display: flex;
     color: white;    
-    font-size: 6vw;
+    font-size: 1.5rem;
     margin: 10px;
-    align-self: center;    
+    align-self: stretch;    
 }
 .inicio{
     display: flex;
@@ -56,7 +70,7 @@ header .form .submit {
 .carrito{
     display: flex;
     align-items: center;
-    /* font-size: 6vw; */
+    font-size: 1.5rem;
 }
 .carrito a{
     color: white;       
@@ -64,12 +78,13 @@ header .form .submit {
 div.burger-menu{
     text-align: center;
     align-self: center;
+    margin: 10px 20px 20px 0px;
 }
 
 div.burger-menu i{
     border-radius: 5px;
     color: #FFF;
-    font-size: 20px;
+    font-size: 1.5rem;
     height: 20px;
     margin: 10px 0px 20px 0px;
     padding: 10px;

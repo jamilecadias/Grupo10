@@ -7,6 +7,7 @@
     <title>Coffea Shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,700;1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -16,27 +17,33 @@
 </head>
 <body>
     <header>
-        <div id="logo">
-            <img  src="images/Logo_coffea_sinFondo.png" alt="Logo Coffea Shop">
-        </div>
-        <div class="form" action="#" method="GET">
-            <div class="input">Buscar productos, marcas y más</div>
-            <div class="submit"><i class="fa fa-search"></i></div>
-        </div>
-        </div>
-        <div class="inicio">            
-                <a href="/">INICIO </a>
-                <a href="#">NOSOTROS </a>
-                <a href="/registro">REGISTRATE </a>
-                <a href="/login">INGRESAR  </a>
-                            
-        </div>
-        <div class="carrito">
-            <a href="iconoCarrito" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-        <div class="burger-menu">
-            <i class="fa fa-bars burger"></i>
-        </div>
+        <header>
+            <div id="logo">
+                <img  src="images/Logo_coffea_sinFondo.png" alt="Logo Coffea Shop">
+            </div>
+            <div class="nombre">
+                <p id="coffea">Coffea</p>
+                <p id="shop">SHOP</p>
+            </div>
+            <div class="form" action="#" method="GET">
+                <div class="input">Buscar productos, marcas y más</div>
+                <div class="submit"><i class="fa fa-search"></i></div>
+            </div>
+            </div>
+            <div class="inicio">            
+                    <a href="/">INICIO </a>
+                    <a href="#">NOSOTROS </a>
+                    <a href="/registro">REGISTRATE </a>
+                    <a href="/login">INGRESAR  </a>
+                                
+            </div>
+            <div class="carrito">
+                <a href="iconoCarrito" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="burger-menu">
+                <i class="fa fa-bars burger"></i>
+            </div>
+        </header>
     </header>
     <main>
         <section id="seccion1">
@@ -58,7 +65,7 @@
             </div>
             <div>
                 <form class="opciones" action="/iconoCarrito" method="get">
-                    <label for="molienda">SELECCIONA TU MOLIENDA</label>
+                    <!-- <label for="molienda">SELECCIONA TU MOLIENDA</label>
                     <select name="molienda" id="molienda">
                         <option value="Elegir una opción">Elegir una opción</option>
                         <option value="En grano">En grano</option>
@@ -72,7 +79,7 @@
                         <option value="1000">1 kG</option>
                         <option value="500">1/2 Kg</option>
                         <option value="250">1/4 Kg</option>            
-                    </select>
+                    </select> -->
                     <button type="submit">Agregar al Carrrito</button>
                 </form>
             </div>
@@ -112,7 +119,7 @@
                 </article>
                 <article class="producto2">
                     <div class="imagen-cafe">
-                    <a href="#"><img src="/images/trung.jpg"></a>
+                    <a href="#"><img src="/images/trung.jpeg"></a>
                     </div>
                     <div class="datos-producto">
                     <a href="#" class="descrpcion-trung">Café Trung Nguyen Premium Vietnam 425g</a>
