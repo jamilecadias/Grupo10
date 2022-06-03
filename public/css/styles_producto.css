@@ -8,9 +8,9 @@ main{
     width: 90%;
     margin: auto;
 }
-#logo{
+/* #logo{
     width: 23%;
-}
+} */
 #imagenproducto{
     width: 100%;
 }
@@ -108,25 +108,25 @@ main .imgproducto1{
     width: 100vw;
 }
 @media (min-width: 480px){
-header{
+/* header{
     display: flex;
     flex-wrap: wrap;
 
 }
 #logo{
 width: 20%;
-}
+} */
 .form{
     flex-grow: 0.8;
 }
 }
 @media (min-width: 769px){
-header{
+/* header{
     justify-content:flex-start;
 }
 #logo{
     width: 10vw;
-}
+} */
 main{
     display: flex;
     flex-wrap: wrap;
@@ -146,5 +146,7 @@ main{
 }
 #productosrelacionados{
     display: flex;
+    margin: auto;
+    justify-content: flex-start;
 }
 }
