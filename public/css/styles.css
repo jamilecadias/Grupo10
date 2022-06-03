@@ -97,7 +97,7 @@ header .form .submit {
 
 /*MAIN*/
 main section{
-    width: 90%;
+    width: 100vw;
     text-align: center;
     align-content: center;
     background-color: #FFF;
@@ -106,6 +106,7 @@ main section{
 main section.banner img {
     width: 100vw;    
 }
+
 
 h2{
     text-align: center;
@@ -134,6 +135,7 @@ a.boton{
 section.opinion {
     background-color: #F5ECCE;
     padding: 40px;
+    width: 100vw;
 }
 
 section.opinion h2{
@@ -146,6 +148,7 @@ section.opinion p {
 section.como-comprar {
     background-color: #2c3425;
     line-height: 30px;
+    width: 100vw;
 }
 
 section.como-comprar{
@@ -179,7 +182,7 @@ footer {
     
 }
 .direccion {
-    font-size: 15px;
+    font-size: 18px;
     width: 70vw;
     margin: auto;
     padding: 15px;
@@ -194,7 +197,7 @@ footer {
 div.enlaces_footer {
     display: flex;
     justify-content: space-around;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 /*Descargar fuente con menos peso*/

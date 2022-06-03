@@ -95,7 +95,7 @@ footer {
     font-family: 'Montserrat', sans-serif;
 }
 .direccion {
-    font-size: 15px;
+    font-size: 18px;
     width: 70vw;
     margin: auto;
     padding: 15px;
@@ -110,7 +110,7 @@ footer {
 .enlaces_footer {
     display: flex;
     justify-content: space-around;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 /*Carrito*/
