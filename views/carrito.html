@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffea Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,700;1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles_carrito.css">
@@ -13,8 +14,12 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="/home"><img src="images/Logo_coffea2.png" alt="Logo Coffea Shop"></a>
+        <div id="logo">
+            <img  src="images/Logo_coffea_sinFondo.png" alt="Logo Coffea Shop">
+        </div>
+        <div class="nombre">
+            <p id="coffea">Coffea</p>
+            <p id="shop">SHOP</p>
         </div>
         <div class="form" action="#" method="GET">
             <div class="input">Buscar productos, marcas y más</div>
@@ -22,14 +27,14 @@
         </div>
         </div>
         <div class="inicio">            
-                <a href="#">INICIO </a>
+                <a href="/">INICIO </a>
                 <a href="#">NOSOTROS </a>
-                <a href="/registro">REGISTRATE </a>
-                <a href="#">INGRESAR  </a>    
-                
+                <a href="/register">REGISTRATE </a>
+                <a href="/login">INGRESAR  </a>
+                            
         </div>
         <div class="carrito">
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="iconoCarrito" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
         <div class="burger-menu">
             <i class="fa fa-bars burger"></i>
@@ -105,7 +110,7 @@
     </main>
     <footer>
         <div class="direccion">
-            <p>Calle Falsa 1234 | CP (4321) | Barrio Inexistente | Provincia Ficticia | País Inventado</p>
+            <a>Calle Falsa 1234 | CP (4321) | Barrio Inexistente | Provincia Ficticia | País Inventado</a>
         </div>  
         <div class="enlaces_footer">
             <a href="#"><i class="fa-solid fa-credit-card"></i> Medios de pago</a>

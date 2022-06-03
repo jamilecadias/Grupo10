@@ -13,8 +13,8 @@ app.get('/div.logo', (req, res)=>{
     res.sendFile (path.join(__dirname,'/views/home.html'))
 })
 
-app.get('/registro', (req, res)=>{
-    res.sendFile (path.join(__dirname,'/views/registro.html'))
+app.get('/register', (req, res)=>{
+    res.sendFile (path.join(__dirname,'/views/register.html'))
 });
 
 app.get('/iconoCarrito', (req, res)=>{
