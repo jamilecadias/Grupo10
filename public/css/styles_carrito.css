@@ -139,21 +139,23 @@ footer {
 /*Carrito*/
 main {
     font-family: 'Montserrat', sans-serif;
-        
+    padding: 15px;
     }
 
 h1 {
     display: flex;
     justify-content: center;
+    padding: 40px;
    }
 
+  
 img {
     width: 5vw;
 }
 
-.producto1, .producto2 {
+div.producto1, div.producto2 {
     width: 90vw;
-    border: solid black 1px;
+    border: dotted black 1px;
     margin: auto;    
 }
 
@@ -162,21 +164,26 @@ img {
 }
 
 .actualizar {
-    border: solid black 1px;
+    border: dotted black 1px;
     width: 90vw;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     margin: auto;
-    background-color: #F5ECCE ;
+    background-color: #F5ECCE;
 }
 
 .actualizar a {
-    margin-right: 20px;
-    border: solid black 1px;
-    background-color: white;
+    border: solid #728f63 1px;
+    background-color: #728f63;
     text-decoration: none;
-    color: black;
+    color: white;
+    border-radius: 5px;
     }
+
+.actualizar:hover a{
+    background: #a7c697;
+    text-shadow: none;
+}
 
 .img-producto1 , .img-producto2 {
     display: flex;
@@ -193,62 +200,71 @@ img {
     justify-content: center;
 }
 
-.total {
-    padding: 20px;
+section.total {
+    padding: 50px;
     }
-.filaTotal {
+div.filaTotal {
     margin: auto;
-    width: 90vw;
+    
     display: flex;
     justify-content: left;
-    border: solid black 1px;
+    border: dotted black 1px;
     margin-right: 10px;
     background-color: #F5ECCE;
       
 }
 
-.subtotal {
+div.subtotal {
     margin: auto;
-    width: 90vw;
+    
     display: flex;
     justify-content: space-between;
-    border: solid black 1px;
+    border: dotted black 1px;
     margin-right: 10px;
     }
- .envio {
+ div.envio {
     margin: auto;
-    width: 90vw;
+    
     display: flex;
     justify-content: space-between;
-    border: solid black 1px;
+    border: dotted black 1px;
     margin-right: 10px;
     }
 
-.filafinal {
+div.filafinal {
     margin: auto;
-    width: 90vw;
+    
     display: flex;
     justify-content: space-between;
-    border: solid black 1px;
+    border: dotted black 1px;
     margin-right: 10px;
   }
 
-.finalizar {
+div.finalizar {
     margin: auto;
-    width: 90vw;
+    
     display: flex;
     justify-content: center;
-    border: solid black 1px;
+    border: dotted black 1px;
     margin-right: 10px;
     background-color: #F5ECCE;
+   
    }
 
- .finalizar a {
-     border: solid black 1px;
-     background-color: white;
+ div.finalizar a {
+     border: solid #728f63 1px;
+     background-color: #728f63;
      text-decoration: none;
-     color: black;
+     color: white; 
+     border-radius: 5px;
  }
+
+ div.finalizar:hover a{
+    background: #a7c697;
+    text-shadow: none;
+}
+
+
 
 /* Media */
 
@@ -265,60 +281,59 @@ img {
       width: 95vw;
   }
     
-        .total {
-        padding: 20px;
+section.total {
+        padding: 50px;
      }
-    .filaTotal {
+    div.filaTotal {
         margin: auto;
         width: 50vw;
         display: flex;
         justify-content: left;
-        border: solid black 1px;
         margin-right: 10px;
         background-color: #F5ECCE;
     }
     
-    .subtotal {
+    div.subtotal {
         margin: auto;
         width: 50vw;
         display: flex;
         justify-content: space-between;
-        border: solid black 1px;
+        border: dotted black 1px;
         margin-right: 10px;
         }
-     .envio {
+     div.envio {
         margin: auto;
         width: 50vw;
         display: flex;
         justify-content: space-between;
-        border: solid black 1px;
+        border: dotted black 1px;
         margin-right: 10px;
         }
     
-    .filafinal {
+    div.filafinal {
         margin: auto;
         width: 50vw;
         display: flex;
         justify-content: space-between;
-        border: solid black 1px;
+        border: dotted black 1px;
         margin-right: 10px;
       }
     
-    .finalizar {
+    div.finalizar {
         margin: auto;
         width: 50vw;
         display: flex;
         justify-content: center;
-        border: solid black 1px;
+        border: dotted black 1px;
         margin-right: 10px;
         background-color: #F5ECCE;
        }
     
      .finalizar a {
-         border: solid black 1px;
-         background-color: white;
+         border: solid #728f63 1px;
+         background-color: #728f63;
          text-decoration: none;
-         color: black;
+         color: white;
      }
 }
 
