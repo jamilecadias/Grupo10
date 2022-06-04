@@ -5,36 +5,44 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Mi cuenta - Coffea</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,700;1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
    <link rel="stylesheet" href="css/styles_registro.css">
+   <link rel="stylesheet" href="css/styles.css">
    <script src="https://kit.fontawesome.com/09a65808e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-       <div class="logo">
-           <a href="/home"><img src="images/Logo_coffea2.png" alt="Logo Coffea Shop"></a>
-       </div>
-       <div class="form" action="#" method="GET">
-           <div class="input">Buscar productos, marcas y más</div>
-           <div class="submit"><i class="fa fa-search"></i></div>
-       </div>
-       </div>
-       <div class="inicio">           
-               <a href="/home">INICIO </a>
-               <a href="#">NOSOTROS </a>
-               <a href="/registro">REGISTRATE </a>
-               <a href="/login">INGRESAR  </a>   
- 
-       </div>
-       <div class="carrito">
-           <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-       </div>
-       <div class="burger-menu">
-           <i class="fa fa-bars burger"></i>
-       </div>
-   </header>
+        <div id="logo">
+            <img  src="images/Logo_coffea_sinFondo.png" alt="Logo Coffea Shop">
+        </div>
+        <div class="nombre">
+            <p id="coffea">Coffea</p>
+            <p id="shop">SHOP</p>
+        </div>
+        <div class="form" action="#" method="GET">
+            <div class="input">Buscar productos, marcas y más</div>
+            <div class="submit"><i class="fa fa-search"></i></div>
+        </div>
+        </div>
+        <div class="inicio">            
+                <a href="/">INICIO </a>
+                <a href="#">NOSOTROS </a>
+                <a href="/register">REGISTRATE </a>
+                <a href="/login">INGRESAR  </a>
+                            
+        </div>
+        <div class="carrito">
+            <a href="iconoCarrito" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+    </header>
  
    <!--formulario de registro de la pagina     <fieldset class="grupo"> </fieldset>-->
            <main>  
@@ -73,8 +81,8 @@
    <div>
        <button  type="submit" class="boton">CREAR CUENTA</button>
    </div>
-   <div>
-       <p class="sesion"> ¿Ya tenés una cuenta? </p>
+   <div class="sesion">
+       <p>  ¿Ya tenés una cuenta? </p>
        <a href="/login">Iniciá sesión </a>
    </div>
  
@@ -85,17 +93,18 @@
  
        <!--formulario de registro de la pagina -->
  
- 
-   <footer>
-       <div class="direccion">
-           <a>Calle Falsa 1234 | CP (4321) | Barrio Inexistente | Provincia Ficticia | País Inventado</a>
-       </div> 
-       <div class="enlaces_footer">
-           <a href="#"><i class="fa-solid fa-credit-card"></i> Medios de pago</a>
-           <a href="#"><i class="fa-solid fa-truck"></i> Envíos</a>
-           <a href="#"><i class="fa-solid fa-lock"></i> Avisos de Privacidad</a>
-           <a href="#"><i class="fa-solid fa-circle-exclamation"></i> Términos y condiciones</a>
-       </div>
-   </footer>
+       <footer>
+        <div class="direccion">
+            <a>Calle Falsa 1234 | CP (4321) | Barrio Inexistente | Provincia Ficticia | País Inventado</a>
+        </div>  
+        <div class="enlaces_footer">
+            <a href="#"><i class="fa-solid fa-credit-card"></i> Medios de pago</a>
+            <a href="#"><i class="fa-solid fa-truck"></i> Envíos</a>
+            <a href="#"><i class="fa-solid fa-lock"></i> Avisos de Privacidad</a>
+            <a href="#"><i class="fa-solid fa-circle-exclamation"></i> Términos y condiciones</a>
+        </div>
+    </footer>
+    
 </body>
+
 </html>
