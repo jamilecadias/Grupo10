@@ -162,7 +162,6 @@ div.producto1, div.producto2 {
 .producto1 a , .producto2 a {
     padding: 0 50px;
 }
-
 .actualizar {
     border: dotted black 1px;
     width: 90vw;
@@ -170,14 +169,16 @@ div.producto1, div.producto2 {
     justify-content: center;
     margin: auto;
     background-color: #F5ECCE;
+    padding: 10px;
 }
 
-.actualizar a {
+button.actualizar-carrito {
     border: solid #728f63 1px;
     background-color: #728f63;
     text-decoration: none;
     color: white;
     border-radius: 5px;
+    padding: 2px;
     }
 
 .actualizar:hover a{
@@ -242,21 +243,22 @@ div.filafinal {
 
 div.finalizar {
     margin: auto;
-    
     display: flex;
     justify-content: center;
     border: dotted black 1px;
     margin-right: 10px;
     background-color: #F5ECCE;
+    padding: 10px;
    
    }
 
- div.finalizar a {
+ button.finalizar-compra {
      border: solid #728f63 1px;
      background-color: #728f63;
      text-decoration: none;
      color: white; 
      border-radius: 5px;
+     padding: 2px;
  }
 
  div.finalizar:hover a{
