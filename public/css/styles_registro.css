@@ -117,17 +117,17 @@ header .form .submit {
     font-weight: bold;
     font-style: normal;
     margin-top: 20px ;
-
 }
 
 #subtitulo {
     color: #2c3425;
     text-align: center;
-
 }
+
 main {
     align-items: center;
 }
+
 fieldset {
     background-color: #fef9f2;
     display: flex;
@@ -142,7 +142,6 @@ fieldset {
     margin-bottom: 50px;
     margin-top: 20px;
     font-weight: 500;
-
 }
 
 .create-form {
@@ -151,11 +150,8 @@ fieldset {
     font-style: italic;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-
+    align-items: center;    
 }
-
 
 .campo label{
     margin-bottom: 5px;
@@ -175,8 +171,6 @@ fieldset {
     text-align: left;
     border-radius: 5px;
     width: 95%;
-
-    
 }
 
 span.error {
@@ -189,6 +183,7 @@ span.error {
     background: rgb(240, 243, 245);
     border:1px solid #2090e6; 
 }
+
 .create-form .boton {
     background: #728f63 ;
     border:0; 
@@ -198,31 +193,38 @@ span.error {
     padding: 0.2em 0.6em;
     border-radius: 5px;
     font-weight: 500;
-
 }
+
 .boton:hover {
     background: #a7c697;
     box-shadow: inset2px 2px 2px rgba(0,0,0.2);
-    text-shadow: none;
-    
+    text-shadow: none;  
 }
+
 .sesion a {
     text-decoration: none;
-git 
+}
+
+.sesion a:hover {
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;
+}
+
+ 
 /*Formulario de registro de la página_Footer*/
 
 footer {
     background-color: rgba(94, 83, 64, 0.95);
     color:white;
-    text-align: center;
-    
+    text-align: center; 
 }
+
 .direccion {
     font-size: 18px;
     width: 70vw;
     margin: auto;
-    padding: 15px;
-    
+    padding: 15px;  
 }
     footer a {
     color: white;
