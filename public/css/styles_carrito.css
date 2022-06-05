@@ -148,7 +148,7 @@ h1 {
     padding: 40px;
    }
 
-  
+
 img {
     width: 5vw;
 }
@@ -156,13 +156,14 @@ img {
 div.producto1, div.producto2 {
     width: 90vw;
     border: dotted black 1px;
-    margin: auto;    
+    margin: auto;
+    border-radius: 5px;    
 }
 
 .producto1 a , .producto2 a {
     padding: 0 50px;
 }
-.actualizar {
+div.actualizar {
     border: dotted black 1px;
     width: 90vw;
     display: flex;
@@ -170,6 +171,7 @@ div.producto1, div.producto2 {
     margin: auto;
     background-color: #F5ECCE;
     padding: 10px;
+    border-radius: 5px;
 }
 
 button.actualizar-carrito {
@@ -189,7 +191,13 @@ button.actualizar-carrito {
 .img-producto1 , .img-producto2 {
     display: flex;
     justify-content: center;
+    max-width: 20%;
 }    
+
+a.eliminar{
+   padding: 20px;
+   color:rgba(109, 109, 109, 0.50)
+}   
 
 .precio-producto1 , .cant-producto1 , .subtotal-producto1 , .precio-producto2 , .cant-producto2 , .subtotal-producto2 {
     display: flex;
@@ -199,6 +207,8 @@ button.actualizar-carrito {
 .producto-producto1 , .producto-producto2 {
     display: flex;
     justify-content: center;
+    max-width: 20%;
+    text-align: center;
 }
 
 section.total {
@@ -206,40 +216,23 @@ section.total {
     }
 div.filaTotal {
     margin: auto;
-    
     display: flex;
     justify-content: left;
     border: dotted black 1px;
     margin-right: 10px;
     background-color: #F5ECCE;
-      
+    border-radius: 5px;      
 }
 
-div.subtotal {
+div.box-total {
     margin: auto;
-    
     display: flex;
     justify-content: space-between;
     border: dotted black 1px;
     margin-right: 10px;
-    }
- div.envio {
-    margin: auto;
-    
-    display: flex;
-    justify-content: space-between;
-    border: dotted black 1px;
-    margin-right: 10px;
+    border-radius: 5px;
     }
 
-div.filafinal {
-    margin: auto;
-    
-    display: flex;
-    justify-content: space-between;
-    border: dotted black 1px;
-    margin-right: 10px;
-  }
 
 div.finalizar {
     margin: auto;
@@ -249,7 +242,7 @@ div.finalizar {
     margin-right: 10px;
     background-color: #F5ECCE;
     padding: 10px;
-   
+    border-radius: 5px;
    }
 
  button.finalizar-compra {
@@ -295,7 +288,7 @@ section.total {
         background-color: #F5ECCE;
     }
     
-    div.subtotal {
+    div.box-total {
         margin: auto;
         width: 50vw;
         display: flex;
@@ -303,24 +296,7 @@ section.total {
         border: dotted black 1px;
         margin-right: 10px;
         }
-     div.envio {
-        margin: auto;
-        width: 50vw;
-        display: flex;
-        justify-content: space-between;
-        border: dotted black 1px;
-        margin-right: 10px;
-        }
-    
-    div.filafinal {
-        margin: auto;
-        width: 50vw;
-        display: flex;
-        justify-content: space-between;
-        border: dotted black 1px;
-        margin-right: 10px;
-      }
-    
+         
     div.finalizar {
         margin: auto;
         width: 50vw;
