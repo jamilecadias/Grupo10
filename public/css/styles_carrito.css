@@ -155,7 +155,7 @@ img {
 
 div.producto1, div.producto2 {
     width: 90vw;
-    border: dotted black 1px;
+    border: solid rgba(109, 109, 109, 0.10) 1px;
     margin: auto;
     border-radius: 5px;    
 }
@@ -164,7 +164,7 @@ div.producto1, div.producto2 {
     padding: 0 50px;
 }
 div.actualizar {
-    border: dotted black 1px;
+    border: solid rgba(109, 109, 109, 0.10) 1px;
     width: 90vw;
     display: flex;
     justify-content: center;
@@ -214,31 +214,31 @@ a.eliminar{
 section.total {
     padding: 50px;
     }
-div.filaTotal {
+
+    div.filaTotal {
     margin: auto;
     display: flex;
     justify-content: left;
-    border: dotted black 1px;
+    border: solid rgba(109, 109, 109, 0.10) 1px;
     margin-right: 10px;
     background-color: #F5ECCE;
     border-radius: 5px;      
 }
 
-div.box-total {
+section.total div.box-total {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    border: dotted black 1px;
+    border: solid rgba(109, 109, 109, 0.10) 1px;
     margin-right: 10px;
     border-radius: 5px;
     }
 
-
-div.finalizar {
+section.total div.finalizar {
     margin: auto;
     display: flex;
     justify-content: center;
-    border: dotted black 1px;
+    border: solid rgba(109, 109, 109, 0.10) 1px;
     margin-right: 10px;
     background-color: #F5ECCE;
     padding: 10px;
