@@ -15,7 +15,7 @@
 - Cumplir con las reuniones semanales.
 
 **4. Hacer menos**
-- (agregar texto aquí)
+- Modificar tareas de compañeros sin consultar o notificar.
 
 **5. Dejar de hacer.**
 - Perder el foco en las reuniones.
