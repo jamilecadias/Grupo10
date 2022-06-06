@@ -183,7 +183,7 @@ button.actualizar-carrito {
     padding: 2px;
     }
 
-.actualizar:hover a{
+.actualizar button:hover {
     background: #a7c697;
     text-shadow: none;
 }
@@ -254,7 +254,7 @@ div.finalizar {
      padding: 2px;
  }
 
- div.finalizar:hover a{
+ div.finalizar button:hover {
     background: #a7c697;
     text-shadow: none;
 }
