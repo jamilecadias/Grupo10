@@ -59,6 +59,21 @@ div.control-form {
     
 }
 
+div.recordarme {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+div.recordarme label {
+width: 40%
+}
+
+div.recordarme input {
+    width: 10%
+    }
+
 .create-form .boton {
     border-radius: 5px;
     border: solid #728f63 5px;
