@@ -34,20 +34,36 @@ section.form-login
 
 span.error {
     width: 90%;
-    text-align: justify;
+    text-align: left;
     font-size: 15px;
 }
 
 label{
     width: 90%;
-    font-size: 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: #2c3425; 
+    text-align: left;
+    width: 95%;
+    border-radius: 5px;
+    font-weight: 600;
         
 }
 
 
 input{
-    width: 95%
+    width: 95%;
+    padding: 6px 12px;
+    display: block;
+    text-align: left;
+    border-radius: 5px;
 }
+
+input:focus, div.recordarme:focus, .boton:focus  {
+    background: rgb(240, 243, 245);
+    border:1px solid #2090e6;
+} 
 
 div.control-form {
     margin-bottom: 15px;
@@ -56,10 +72,12 @@ div.control-form {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap ;
+    font-style: italic;
     
 }
 
 div.recordarme {
+        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         align-items: center;
@@ -67,19 +85,47 @@ div.recordarme {
     }
 
 div.recordarme label {
-width: 40%
+width: 40%;
+margin-bottom: 0px;
+margin-top: 0px ;
+
 }
 
 div.recordarme input {
-    width: 10%
+    width: 10%;
+    padding: 0px 0px;
     }
 
+
+
 .create-form .boton {
+    background: #728f63 ;
+    border:0; 
+    font-size: 15px;
+    margin: 15px ;
+    color: white;
+    padding: 0.2em 0.6em;
     border-radius: 5px;
-    border: solid #728f63 5px;
     font-weight: 500;
-    color: white ;
 
    
 }
 
+.create-form .boton:hover{
+    background: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;
+} 
+
+div.help-block a{
+
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+
+div.help-block a:hover{
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;
+}
