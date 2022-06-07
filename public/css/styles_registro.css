@@ -138,10 +138,11 @@ fieldset {
     margin: auto;
     flex-wrap: wrap;
     max-width: 400px;
-    border: dotted 1px;
+    border: solid rgba(109,109,109, 0.1) 1px;
     margin-bottom: 50px;
     margin-top: 20px;
     font-weight: 500;
+    border-radius: 5px;
 }
 
 .create-form {
@@ -203,6 +204,7 @@ span.error {
 
 .sesion a {
     text-decoration: none;
+    color: black;
 }
 
 .sesion a:hover {
