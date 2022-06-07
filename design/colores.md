@@ -22,3 +22,4 @@ HSL  : 42, 53%, 35%
 
 Otros colores
 #F5ECCE //color fila datos de carrito de compras
+rgba(109, 109,109,0.1) border carrito

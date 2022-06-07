@@ -186,10 +186,11 @@ button.actualizar-carrito {
 .actualizar button:hover {
     background: #a7c697;
     text-shadow: none;
+    border: solid #a7c697 1px;
 }
 
 .img-producto1 , .img-producto2 {
-    display: flex;
+    display: flex; ;
     justify-content: center;
     max-width: 20%;
 }    
@@ -257,6 +258,7 @@ section.total div.finalizar {
  div.finalizar button:hover {
     background: #a7c697;
     text-shadow: none;
+    border: solid #a7c697 1px;
 }
 
 

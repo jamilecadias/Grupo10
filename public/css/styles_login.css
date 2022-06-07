@@ -19,10 +19,11 @@ section.form-login
     flex-wrap: wrap;
     max-width: 400px;
     background-color: #fef9f2;
-    border: dotted 1px;
+    border: solid rgba(109, 109,109,0.1) 1px;
     margin-bottom: 50px;
     margin-top: 20px;
     font-weight: 500;
+    border-radius: 5px;
 }
     
 .iniciar-sesion {
