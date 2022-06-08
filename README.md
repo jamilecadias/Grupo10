@@ -28,6 +28,8 @@ El equipo que conforma el proyecto tiene como meta el diseño y desarrollo de un
 
 ###  TABLERO DEL PROYECTO:  
 
-[Trello del Grupo 10](http://http://https://trello.com/c/q8JPnheM/7-2tablero "Tablero del Grupo 10")
+[Trello del grupo 10](https://trello.com/b/egxp8irz/coffea-grupo10)
+
+
 
 
