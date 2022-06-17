@@ -118,6 +118,9 @@ div.recordarme input {
     text-shadow: none;
 } 
 
+span.error {
+    visibility: hidden;
+}
 
 div.help-block a{
 
