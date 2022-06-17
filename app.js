@@ -3,28 +3,13 @@ const path = require ('path');
 const app = express ();
 const publicPath= path.resolve(__dirname, './public')
 
+const mainRouter = require('./src/routes/mainRouter');
+
 app.use(express.static(publicPath));
 
-app.get('/', (req, res)=>{
-    res.sendFile (path.join(__dirname,'/views/home.html'))
-});
+app.set('view engine', 'ejs');
+app.set('views' , path.join(__dirname , './views'));
 
-app.get('/div.logo', (req, res)=>{
-    res.sendFile (path.join(__dirname,'/views/home.html'))
-})
+app.use('/' , mainRouter);
 
-app.get('/register', (req, res)=>{
-    res.sendFile (path.join(__dirname,'/views/register.html'))
-});
-
-app.get('/iconoCarrito', (req, res)=>{
-    res.sendFile (path.join(__dirname,'/views/carrito.html'))
-});
-
-app.get('/login', (req, res)=>{
-    res.sendFile (path.join(__dirname,'/views/login.html'))
-});
-app.get('/producto', (req, res)=>{
-    res.sendFile (path.join(__dirname,'/views/producto.html'))
-});
 app.listen (3000, (req, res)=> console.log ('Servidor 3000 funcionando'));
