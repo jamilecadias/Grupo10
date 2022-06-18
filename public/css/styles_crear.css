@@ -1,0 +1,252 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    background-color: hsl(40,15%,31.4%);
+    /* background-color: rgba(94, 83, 64, 0.95); */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: auto;
+    align-items: center;
+    width: 100vw;
+}
+#logo{
+    width: 7rem;
+    text-align: center;
+}
+.nombre{
+    display: flex;
+    align-items: flex-end;
+}
+#coffea{
+    color: white;
+    font-size: 4rem;
+    font-family: 'Cookie', cursive;
+    font-weight: 100;
+}
+#shop{
+    color: white;
+    font-size: 1.5rem;
+}
+header .form{
+    display: flex;
+    flex-direction: row;
+    text-align: center;    
+}
+header .form .input{
+    display: flex;
+    background-color: #FFF;  
+    width: 100%;  
+    outline: none;
+    color: #666;
+    padding: 2px;
+    margin-top: 10px;
+    border-radius: 5px;
+    align-self: center;
+    display: none;
+}
+header .form .submit {
+    display: flex;
+    color: white;    
+    font-size: 1.5rem;
+    margin: 10px;
+    align-self: stretch;    
+}
+.inicio{
+    display: flex;
+    flex-direction: row;        
+}
+.inicio a{
+    display: flex;
+    margin: 15px;
+    color: white;    
+    text-decoration: none;
+    display: none;
+}
+.carrito{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.carrito a{
+    color: white;       
+}
+
+.carrito a:hover {
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;  
+}
+.inicio a:hover {
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;  
+}
+div.burger-menu{
+    text-align: center;
+    align-self: center;
+    margin: 10px 20px 20px 0px;
+}
+
+div.burger-menu i{
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1.5rem;
+    height: 20px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 20px;
+}
+@media(min-width: 768px){   
+.logo img{ width: 6vw;}
+div.burger-menu{ display: none;} 
+header .form{display: flex;}
+header .form .input{ 
+    display: flex;    
+}
+.inicio a{
+    display: flex;
+    font-size: 90%;
+    /* font-weight: bold; */
+}
+
+header .form .submit { 
+    font-size: 100%;
+}
+.carrito{
+    font-size: 4;
+}
+}
+
+/*Formulario de registro de la página*/
+#titulo {
+    color: #2c3425;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 20px ;
+}
+
+#subtitulo {
+    color: #2c3425;
+    text-align: center;
+}
+
+main {
+    align-items: center;
+}
+
+fieldset {
+    background-color: #fef9f2;
+    display: flex;
+    width: 40%;
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+    max-width: 400px;
+    border: solid rgba(109,109,109, 0.1) 1px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.create-form {
+    padding: 20 px 15px; 
+    margin-bottom: 5px;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.campo label{
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: #2c3425; 
+    text-align: left;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
+    border-radius: 5px;
+}
+
+.campo input{
+    padding: 6px 12px;
+    display: block;
+    text-align: left;
+    border-radius: 5px;
+    width: 95%;
+}
+
+span.error {
+    width: 90%;
+    text-align:left;
+    font-size: 15px;
+}
+    
+.create-form input:focus, .campo :focus {
+    background: rgb(240, 243, 245);
+    border:1px solid #2090e6; 
+}
+
+.create-form .boton {
+    background: #728f63 ;
+    border:0; 
+    font-size: 15px;
+    margin: 15px ;
+    color: white;
+    padding: 0.2em 0.6em;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.boton:hover {
+    background: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;  
+}
+
+.sesion a {
+    text-decoration: none;
+    color: rgb(115, 117, 115);
+}
+
+.sesion a:hover {
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;
+}
+ 
+/*Footer del formulario de registro de la página*/
+
+footer {
+    background-color: rgba(94, 83, 64, 0.95);
+    color:white;
+    text-align: center; 
+}
+
+.direccion {
+    font-size: 18px;
+    width: 70vw;
+    margin: auto;
+    padding: 15px;  
+}
+    footer a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+
+div.enlaces_footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
