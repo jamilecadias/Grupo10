@@ -20,6 +20,9 @@ const mainController = {
     carrito: (req, res)=>{
         res.render('carrito')
     },
+    cargar: (req, res)=>{
+        res.render('cargar_productos')
+    },
 }; 
 
 module.exports = mainController;
