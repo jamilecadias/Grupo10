@@ -75,6 +75,17 @@ header .form .submit {
 .carrito a{
     color: white;       
 }
+
+.carrito a:hover {
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;  
+}
+.inicio a:hover {
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;  
+}
 div.burger-menu{
     text-align: center;
     align-self: center;
@@ -102,6 +113,7 @@ header .form .input{
     font-size: 90%;
     /* font-weight: bold; */
 }
+
 header .form .submit { 
     font-size: 100%;
 }
