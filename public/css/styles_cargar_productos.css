@@ -186,6 +186,15 @@ fieldset {
     width: 95%;
 }
 
+.campo textarea{
+    padding: 6px 12px;
+    display: block;
+    text-align: left;
+    border-radius: 5px;
+    width: 95%;
+}
+
+
 span.error {
     width: 90%;
     text-align:left;
