@@ -8,7 +8,6 @@ const mainRouter = require('./src/routes/mainRouter');
 app.use(express.static(publicPath));
 
 app.set('view engine', 'ejs');
-app.set('views' , path.join(__dirname , './views'));
 
 app.use('/' , mainRouter);
 
