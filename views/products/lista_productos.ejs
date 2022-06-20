@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ('../partials/head.ejs')%>
+<link rel="stylesheet" href="css/styles_lista_productos.css">
+
+<body>
+    <%- include ('../partials/header.ejs')%>
+    <main>
+        <section class="productos">
+            <h1>NUESTROS CAFÉS</h1>
+    
+            <div class="imagen-cafe">
+                <a href="#"><img src="/images/juan_valdez.jpg"></a>
+            </div>
+            <div class="datos-producto">
+                <a href="#" class="descrpcion-juan-valdez">Café Juan Valdéz Premiun Seleccion Colombia 340g</a>
+                <p class="precio">$5000</p>
+                <a href="/producto" class="boton">Ver más</a>
+            </div>
+            <div class="imagen-cafe">
+                <a href="#"><img src="/images/pilao.jpg"></a>
+            </div>
+            <div class="datos-producto">    
+                <a href="#" class="descrpcion-pilao">Café Pilao Tradicional Brasil 500g</a>
+                <p class="precio">$3500</p>
+                <a href="#" class="boton">Ver más</a>
+            </div>
+            <div class="imagen-cafe">
+                <a href="#"><img src="/images/trung.jpeg"></a>
+            </div>
+            <div class="datos-producto">
+                <a href="#" class="descrpcion-trung">Café Trung Nguyen Gourmet Blend Vietnam 500g</a>
+                <p class="precio">$10000</p>
+                <a href="#" class="boton">Ver más</a>
+            </div>
+            <br>
+            <div>
+                <a href="/cargar_productos" class="boton">CREAR PRODUCTO</a>
+            <br>
+            </div>
+            </section>
+           
+
+    </main>
+    <%- include ('../partials/footer.ejs')%>
+    
+</body>
+
+</html>

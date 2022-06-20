@@ -15,4 +15,7 @@ router.get('/iconoCarrito', mainController.carrito);
 
 router.get('/cargar_productos', mainController.cargar);
 
+router.get('/listaProductos', mainController.listaProductos);
+
+router.get('/editar_productos' , mainController.editar);
 module.exports = router; 

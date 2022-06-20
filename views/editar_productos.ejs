@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('./partials/head.ejs')%>
+    <link rel="stylesheet" href="css/styles_cargar_productos.css">
+<body>
+    <%- include ('./partials/header.ejs')%>
+ 
+   <!--Formulario de registro de la pagina-->
+           <main>  
+   <form action="cargar_productos.ejs" method="POST" class="create-form">
+           <div>
+       <h1 id="titulo">Crear producto</h1>
+      <!-- <p id="subtitulo">Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>-->
+   </div>
+   <fieldset class="grupo"> 
+      <div class="campo">
+       <label for="nombre"><strong>Nombre del producto:</strong></label>
+       <input type="text" name="nombre" id="nombre" placeholder="Café Juan Valdéz Premiun Seleccion Colombia 340g" required>
+   </div>
+  
+     <div class="campo">
+       <label for="precio"><strong>Precio:</strong></label>
+       <input type="number" name="name" id="precio" placeholder="$5000">
+     </div>
+     <br>
+
+      <div class="campo">
+       <label for="descripción"><strong>Descripción:</strong></label>
+       <textarea name="descripción" id="descripción" placeholder="Café liofilizado Juan Valdez es un café rico y fácil de preparar que le dará un toque cálido y tradicional a tus mañanas.
+
+       Su practicidad lo convierten en el aliado perfecto cada vez que quieras disfrutar un café con sabor tradicional y sin complicaciones.
+       
+       ¡Llévalo y aprovecha la calidad y sabor con los que Juan Valdez sabe sorprendernos!" required ></textarea>
+     </div>
+
+     <div class="campo">
+        <label class="imagen-producto">Elegí la foto del producto</label>
+        <input type="file" name="imagen-producto">
+        <div id="imagen">
+            <img id="imagenproducto" src="/images/juan_valdez.jpg" alt="Café juan Valdéz">
+        </div>
+        </div>
+ 
+   <div>
+       <button  type="submit" class="boton">GUARDAR</button>
+       <button  type="reset" class="boton">BORRAR</button>
+   </div>
+</fieldset>
+   </main>
+       </form>
+ 
+       <!--Footer del formulario de registro de la pagina -->
+ 
+       <%- include ('./partials/footer.ejs')%>
+    
+</body>
+
+</html>
