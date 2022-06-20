@@ -24,19 +24,19 @@
 
 ## Sprint 2
 
-**1.  Comenzar a hacer**
+**1. Comenzar a hacer**
 - Establecer una o más fechas antes de la entrega para chequear si hay que hacer cambios o mejoras.
 - Redactar brevemente lo que hablamos en la reunión.
 
 **2. Hacer más**
-- Priorizar las actividades del sprint
-- CUsar slack
+- Priorizar las actividades del sprint.
+- Usar slack.
 
 **3. Continuar haciendo**
-- Mantener las reuniones semanales
+- Mantener las reuniones semanales.
 
 **4. Hacer menos**
-- Enviar información innecesaria al canal de información
+- Enviar información innecesaria al canal de información.
 
 **5. Dejar de hacer.**
-- Que queden tareas para último momento
+- Que queden tareas para último momento.
