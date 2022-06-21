@@ -60,13 +60,33 @@ select{
     font-weight: 400;
 }
 button{
-    margin: 20px;
+    background: #728f63 ;
+    border:0; 
+    font-size: 15px;
+    margin: 15px ;
+    color: white;
     padding: 15px;
-    font-weight: bold;
-    background-color: rgba(94, 83, 64, 0.9);
-    color: white;  
     border-radius: 5px;
+    font-weight: 500;
 }
+
+button:hover {
+    background: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;  
+}
+
+a.editar {
+    text-decoration: none;
+    color: rgb(115, 117, 115);
+}
+
+a.editar:hover{
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;
+}
+
 .reviews h4{
     text-align: center;
     margin-bottom: 15px;
