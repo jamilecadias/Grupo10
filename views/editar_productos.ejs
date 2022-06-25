@@ -9,7 +9,7 @@
            <main>  
    <form action="cargar_productos.ejs" method="POST" class="create-form">
            <div>
-       <h1 id="titulo">Crear producto</h1>
+       <h1 id="titulo">Editar producto</h1>
       <!-- <p id="subtitulo">Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>-->
    </div>
    <fieldset class="grupo"> 
@@ -32,6 +32,14 @@
        
        ¡Llévalo y aprovecha la calidad y sabor con los que Juan Valdez sabe sorprendernos!" required ></textarea>
      </div>
+
+     <div class="campo">
+        <label class="imagen-caracteristicas">Características:</label>
+        <input type="file" name="imagen-caracteristicas">
+        <div id="imagen">
+            <img id="imagencaracteristicas" src="/images/Caracteristicas.PNG" alt="Café juan Valdéz">
+        </div>
+        </div>
 
      <div class="campo">
         <label class="imagen-producto">Elegí la foto del producto</label>
