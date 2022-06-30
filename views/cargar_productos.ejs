@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include ('./partials/head.ejs')%>
-    <link rel="stylesheet" href="css/styles_cargar_productos.css">
+    <link rel="stylesheet" href="../css/styles_cargar_productos.css">
 <body>
     <%- include ('./partials/header.ejs')%>
  
    <!--Formulario de registro de la pagina-->
            <main>  
-   <form action="cargar_productos.ejs" method="POST" class="create-form">
+   <form action="/products" method="POST" class="create-form">
            <div>
        <h1 id="titulo">Crear producto</h1>
       <!-- <p id="subtitulo">Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>-->
@@ -15,28 +15,28 @@
    <fieldset class="grupo"> 
       <div class="campo">
        <label for="nombre"><strong>Nombre del producto:</strong></label>
-       <input type="text" name="nombre" id="nombre" placeholder="Ej.: Café Coffea origen 200g"required>
+       <input type="text" name="name" id="nombre" placeholder="Ej.: Café Coffea origen 200g"required>
    </div>
   
      <div class="campo">
        <label for="precio"><strong>Precio:</strong></label>
-       <input type="number" name="name" id="precio" placeholder="$5000">
+       <input type="number" name="price" id="precio" placeholder="$5000">
      </div>
      <br>
 
     <div class="campo">
        <label for="descripción"><strong>Descripción:</strong></label>
-       <textarea name="descripción" id="descripción" placeholder="Escriba la descripción" required ></textarea>
+       <textarea name="description" id="descripción" placeholder="Escriba la descripción" required ></textarea>
     </div>
 
     <div class="campo">
       <label class="imagen-caracteristicas">Características:</label>
-      <input type="file" name="imagen-caracteristicas">
+      <input type="file" name="features">
   </div>
 
     <div class="campo">
         <label class="imagen-producto">Elegí la foto del producto</label>
-        <input type="file" name="imagen-producto">
+        <input type="file" name="image">
     </div>
  
    <div>

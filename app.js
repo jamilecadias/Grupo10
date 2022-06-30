@@ -3,6 +3,10 @@ const path = require ('path');
 const app = express ();
 const publicPath= path.resolve(__dirname, './public')
 
+app.use(express.urlencoded({ extended: false }));
+
+app.use(express.json());
+
 const mainRouter = require('./src/routes/mainRouter');
 
 app.use(express.static(publicPath));

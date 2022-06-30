@@ -24,6 +24,14 @@ const mainController = {
         res.render('./products/producto',{product})
     }, 
 
+    store: (req, res) => {
+		let product = req.body;
+		product.id = (products.length + 1);
+		products.push(product);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
+		res.redirect('/products')
+	},
+
     login: (req, res)=>{
         res.render('./users/login')
     },
@@ -42,7 +50,8 @@ const mainController = {
         res.render('./products/lista_productos')
     },
 
-    editar: (req,res)=>{
+    edit: (req,res)=>{
+        let id = req.params.id;
         res.render('editar_productos')
     }
 }; 

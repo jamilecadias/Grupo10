@@ -9,13 +9,22 @@ router.get('/login', mainController.login);
 
 router.get('/register', mainController.register);
 
+router.get('/products', mainController.listaProductos);
+
+router.get('/products/create', mainController.cargar);
+
+router.post('/products', mainController.store);
+
+router.get('/products/:id/edit', mainController.edit)
+
+
 router.get('/products/:id', mainController.producto);
 
 router.get('/iconoCarrito', mainController.carrito);
 
-router.get('/cargar_productos', mainController.cargar);
 
-router.get('/products', mainController.listaProductos);
 
-router.get('/editar_productos' , mainController.editar);
+
+
+router.get('/editar_productos' , mainController.edit);
 module.exports = router; 
