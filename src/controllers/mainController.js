@@ -1,12 +1,27 @@
 const path = require('path');
 
+const fs = require('fs');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
+
 const mainController = {
     home : (req, res)=>{
         res.render('home')
     },
     
     producto: (req, res)=>{
-        res.render('./products/producto')
+
+        let idProducto = req.params.id;
+		let product;
+		for (let i=0; i<products.length; i++) {
+            if (products[i].id == idProducto) {
+				product = products[i];
+			}
+		}
+        res.render('./products/producto',{product})
     }, 
 
     login: (req, res)=>{

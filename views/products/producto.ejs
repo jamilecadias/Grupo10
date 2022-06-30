@@ -2,19 +2,19 @@
 <html lang="en">
 
 <%- include ('../partials/head.ejs')%>
-<link rel="stylesheet" href="css/styles_producto.css">
+<link rel="stylesheet" href="../css/styles_producto.css">
     
 <body>
     <%- include ('../partials/header.ejs')%>
     <main>
         <section id="seccion1">
             <div id="imagen">
-                <img id="imagenproducto" src="/images/juan_valdez.jpg" alt="Café juan Valdéz">
+                <img id="imagenproducto" src="/images/<%= product.image %>" alt="Café juan Valdéz">
             </div>
         </section>
         <section id="seccion2">
             <div id="detalleproducto">
-                <h1>Café Juan Valdéz Premium selection Colombia 340g</h1>
+                <h1><%= product.name %></h1>
                 <div class="calificacion">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -22,7 +22,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>            
                 </div>
-                    <p class="precio">$5000</p>
+                    <p class="precio">$ <%= product.price %></p>
             </div>
             <div>
                 <form class="opciones" action="/iconoCarrito" method="get">
@@ -50,13 +50,11 @@
         <section>
             <div class="descripcion">
                 <h4>Descripción ＋</h4>
-                <P>Café liofilizado Juan Valdez es un café rico y fácil de preparar que le dará un toque cálido y tradicional a tus mañanas.</P>
-                <p>Su practicidad lo convierten en el aliado perfecto cada vez que quieras disfrutar un café con sabor tradicional y sin complicaciones.</p>
-                <p>¡Llévalo y aprovecha la calidad y sabor con los que Juan Valdez sabe sorprendernos!</p>
+                <P><%= product.description %></p>
             </div>
             <div class="caracteristicas">
                 <h4>Caracteristicas ＋</h4>
-                <img id="caracteristcasimg" src="/images/Caracteristicas.PNG" alt="caracteristicas del Café">
+                <img id="caracteristcasimg" src="/images/<%= product.features %>" alt="caracteristicas del Café">
             </div>
             <div class="reviews">
                 <h4>Reviews ＋</h4>
