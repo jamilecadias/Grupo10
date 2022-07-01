@@ -15,12 +15,17 @@ router.get('/products/create', mainController.cargar);
 
 router.post('/products', mainController.store);
 
-router.get('/products/:id/edit', mainController.edit)
+router.get('/products/:id/edit', mainController.edit); 
+
+router.put('/products', mainController.update);
 
 
 router.get('/products/:id', mainController.producto);
 
+router.delete('/products/:id', mainController.destroy); 
+
 router.get('/iconoCarrito', mainController.carrito);
+
 
 
 
