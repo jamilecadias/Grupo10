@@ -9,7 +9,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
     home : (req, res)=>{
-        res.render('home')
+        res.render('home',{products})
     },
     
     producto: (req, res)=>{
@@ -47,7 +47,7 @@ const mainController = {
         res.render('cargar_productos')
     },
     listaProductos: (req, res)=>{
-        res.render('./products/lista_productos')
+        res.render('./products/lista_productos',{products} )
     },
 
     edit: (req,res)=>{

@@ -12,16 +12,19 @@
         <br>
         <section class="productos">
         <h2>NUESTROS CAFÉS</h2>
-
+        <% for(let producto of products){ %>
         <div class="imagen-cafe">
-            <a href="#"><img src="/images/juan_valdez.jpg"></a>
+            <a href="/products/<%= producto.id %>"><img src="/images/<%= producto.image %>"></a>
         </div>
         <div class="datos-producto">
-            <a href="#" class="descrpcion-juan-valdez">Café Juan Valdéz Premiun Seleccion Colombia 340g</a>
-            <p class="precio">$5000</p>
-            <a href="/producto" class="boton">Ver más</a>
+            <a href="#" class="descrpcion-juan-valdez"><%= producto.name %></a>
+            <p class="precio"><%= producto.price  %></p>
+            <a href="/products/<%= producto.id %>" class="boton">Ver más</a>
+            
         </div>
-        <div class="imagen-cafe">
+
+
+     <!--   <div class="imagen-cafe">
             <a href="#"><img src="/images/pilao.jpg"></a>
         </div>
         <div class="datos-producto">    
@@ -29,6 +32,9 @@
             <p class="precio">$3500</p>
             <a href="#" class="boton">Ver más</a>
         </div>
+
+
+
         <div class="imagen-cafe">
             <a href="#"><img src="/images/trung.jpeg"></a>
         </div>
@@ -37,13 +43,18 @@
             <p class="precio">$10000</p>
             <a href="#" class="boton">Ver más</a>
         </div>
-        <br>
+        <br>  -->
+        <% } %>
         </section>
+
+
         <section class="opinion">
             <h2>LO QUE DICEN NUESTROS CLIENTES</h2>
             <p>"Destaco el sistema de venta online y posterior delivey,hace un año soy cliente y la calidad y entrega son perfectas"</p>
             <p>Juan Pablo / La Plata, Argentina</p>
         </section>
+
+
         <section class="como-comprar">
             <h2>PASOS PARA REALIZAR TU COMPRA</h2>
             <br>
@@ -71,6 +82,9 @@
             </div>
             
         </section>
+
+
+
         </main>
         <%- include ('./partials/footer.ejs')%>
 </body>
