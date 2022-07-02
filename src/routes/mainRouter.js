@@ -17,7 +17,7 @@ router.post('/products', mainController.store);
 
 router.get('/products/:id/edit', mainController.edit); 
 
-router.put('/products', mainController.update);
+router.put('/products/:id', mainController.update);
 
 
 router.get('/products/:id', mainController.producto);
