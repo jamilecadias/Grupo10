@@ -1,35 +1,37 @@
 const express = require ('express');
 const router = express.Router();  
-
 const mainController = require('../controllers/mainController'); 
 
+// Acceso al home
 router.get('/', mainController.home);
 
-router.get('/login', mainController.login);
-
-router.get('/register', mainController.register);
+// Acceso a lista de productos
 
 router.get('/products', mainController.listaProductos);
 
-router.get('/products/create', mainController.cargar);
-
-router.post('/products', mainController.store);
-
-router.get('/products/:id/edit', mainController.edit); 
-
-router.put('/products/:id', mainController.update);
-
+// Acceso al detalle del producto
 
 router.get('/products/:id', mainController.producto);
 
-router.delete('/products/:id', mainController.destroy); 
+// Formulario de creación
+router.get('/products/create', mainController.cargar); // Acceso
+router.post('/products', mainController.store); // Envío
 
+// Formulario de edición
+router.get('/products/:id/edit', mainController.edit); // Acceso
+router.put('/products/:id', mainController.update);  //Envío
+router.delete('/products/:id', mainController.destroy); // Eliminar
+
+// Formulario de login
+
+router.get('/login', mainController.login);
+
+// Registro
+router.get('/register', mainController.register); // Acceso
+
+// Acceso al carrito
 router.get('/iconoCarrito', mainController.carrito);
 
+//router.get('/editar_productos' , mainController.edit); // Creo que sobra
 
-
-
-
-
-router.get('/editar_productos' , mainController.edit);
 module.exports = router; 
