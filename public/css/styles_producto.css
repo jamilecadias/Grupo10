@@ -87,6 +87,17 @@ a.editar:hover{
     text-shadow: none;
 }
 
+button.eliminar {
+    color: #728f63;
+    background: none;
+}
+
+button.eliminar:hover{
+    color: #a7c697;
+    box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+    text-shadow: none;
+}
+
 .reviews h4{
     text-align: center;
     margin-bottom: 15px;
