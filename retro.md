@@ -40,3 +40,26 @@
 
 **5. Dejar de hacer.**
 - Que queden tareas para último momento.
+
+ ## Sprint 3
+
+**1. Comenzar a hacer**
+- Redactar brevemente lo que hablamos en la reunión.
+- Implementar weeklies.  
+- Dividir las tareas. 
+
+**2. Hacer más**
+- Consultar temas o contenidos que no quedan del todo claro hasta incorporarlos. 
+- Usar slack.
+
+**3. Continuar haciendo**
+- Mantener las reuniones semanales.
+- Priorizar las actividades del sprint. 
+- Mantener una o más fechas antes de la entrega para chequear si hay que hacer cambios o mejoras.
+- Redactar brevemente lo que hablamos en la reunión.
+
+**4. Hacer menos**
+- Enviar información innecesaria al canal de información.
+
+**5. Dejar de hacer.**
+- Quedarnos con dudas que afecten al desarrollo del sprint. 
