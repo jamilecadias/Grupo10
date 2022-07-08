@@ -5,7 +5,8 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-
+const usersFilePath = path.join(__dirname , '../data/users.json');
+let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const mainController = {
     home : (req, res)=>{
@@ -85,6 +86,15 @@ const mainController = {
 		res.redirect('/products')
 	},
 
-}; 
+	processUsersRegister :  (req , res) =>  {
+		let user = req.body;
+		user.id = (users.length + 1);
+		users.push(user);
+		fs.writeFileSync(usersFilePath, JSON.stringify(users), 'utf-8');
+		res.redirect('/products');
+	}
+}
+
+
 
 module.exports = mainController;

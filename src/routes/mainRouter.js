@@ -15,7 +15,7 @@ router.get('/products/:id', mainController.producto);
 
 // Formulario de creación
 router.get('/products/create', mainController.cargar); // Acceso
-router.post('/products', mainController.store); // Envío
+router.post('/products', mainController.store); // Procesamiento
 
 // Formulario de edición
 router.get('/products/:id/edit', mainController.edit); // Acceso
@@ -28,6 +28,7 @@ router.get('/login', mainController.login);
 
 // Registro
 router.get('/register', mainController.register); // Acceso
+router.post('/register' , mainController.processUsersRegister) // Procesamiento
 
 // Acceso al carrito
 router.get('/iconoCarrito', mainController.carrito);
