@@ -1,0 +1,11 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+   }
+
+
+img {
+    width: 30vw;
+    margin-bottom: 15px;
+}

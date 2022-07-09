@@ -15,4 +15,8 @@ app.set('view engine', 'ejs');
 
 app.use('/' , mainRouter);
 
+app.use((req,res,next)=>{
+    res.status(404).render('error')
+})
+
 app.listen (3000, (req, res)=> console.log ('Servidor 3000 funcionando'));
