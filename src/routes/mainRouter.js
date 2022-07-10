@@ -7,7 +7,8 @@ const path = require('path');
 const multer = require('multer'); 
 const storageUsers = multer.diskStorage({
     destination:(req, file, cb)=>{
-        cb(null, path.join(__dirname, '../public/images/usersImages'))
+        cb(null, path.join(__dirname, '/../../public/images/usersImages'))
+        
     },
     filename:(req, file, cb)=>{
         let userName = "user-" + Date.now() + path.extname(file.originalname);
