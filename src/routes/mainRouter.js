@@ -1,6 +1,7 @@
 const express = require ('express');
 const router = express.Router();  
 const mainController = require('../controllers/mainController'); 
+const multer = require('multer'); 
 
 // Acceso al home
 router.get('/', mainController.home);
