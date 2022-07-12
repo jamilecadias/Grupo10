@@ -2,6 +2,8 @@ const path = require('path');
 
 const fs = require('fs');
 
+const bcryptjs = require('bcryptjs')
+
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -87,11 +89,33 @@ const mainController = {
 	},
 
 	processUsersRegister :  (req , res) =>  {
-		let user = req.body;
-		user.id = (users.length + 1);
-		users.push(user);
+
+		let contraseña;
+
+		if (req.body.password == req.body.confirmPassword){
+
+			contraseña = req.body.password
+
+			let user = {
+				id: (users.length + 1),
+				name: req.body.name,
+				email: req.body.email,
+				tel: req.body.tel,
+				password: bcryptjs.hashSync(contraseña,12),
+	
+
+			}
+
+			users.push(user);
 		fs.writeFileSync(usersFilePath, JSON.stringify(users), 'utf-8');
 		res.redirect('/products');
+
+		}else{
+			res.redirect('/register')
+		}
+		
+		
+		
 	}
 }
 
