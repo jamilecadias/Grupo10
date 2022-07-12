@@ -27,14 +27,14 @@ router.get('/products', mainController.listaProductos);
 
 // Acceso al detalle del producto
 
-router.get('/products/:id', mainController.producto);
+router.get('/products/detail/:id', mainController.producto);
 
 // Formulario de creación
 router.get('/products/create', mainController.cargar); // Acceso vista
 router.post('/products', mainController.store); // Procesamiento
 
 // Formulario de edición
-router.get('/products/:id/edit', mainController.edit); // Acceso vista
+router.get('/products/edit/:id', mainController.edit); // Acceso vista
 router.put('/products/:id', mainController.update);  //Envío
 router.delete('/products/:id', mainController.destroy); // Eliminar
 
