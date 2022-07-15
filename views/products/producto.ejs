@@ -2,7 +2,7 @@
 <html lang="en">
 
 <%- include ('../partials/head.ejs')%>
-<link rel="stylesheet" href="/css/styles_producto.css">
+<link rel="stylesheet" href="css/styles_producto.css">
     
 <body>
     <%- include ('../partials/header.ejs')%>
@@ -26,25 +26,9 @@
             </div>
             <div>
                 <form class="opciones" action="/iconoCarrito" method="get">
-                    <!-- <label for="molienda">SELECCIONA TU MOLIENDA</label>
-                    <select name="molienda" id="molienda">
-                        <option value="Elegir una opción">Elegir una opción</option>
-                        <option value="En grano">En grano</option>
-                        <option value="Molido expresso">Molido expresso</option>
-                        <option value="Molido filtro">Molido filtro</option>
-                        <option value="Molido prensa francesa">Molido prensa francesa</option>
-                    </select>
-                    <label for="peso">SELECCIONA EL PESO</label>
-                    <select name="peso" id="peso">
-                        <option value="Elegir una opción">Elegir una opción</option>
-                        <option value="1000">1 kG</option>
-                        <option value="500">1/2 Kg</option>
-                        <option value="250">1/4 Kg</option>            
-                    </select> -->
-                    <button type="submit">Agregar al Carrrito</button>
-                    
+                <button type="submit">Agregar al Carrrito</button>
                 </form>
-                <a href="/products/<%= product.id %>/edit" class="editar">Editar</a>
+                <a href="/products/edit/<%= product.id %>" class="editar">Editar</a>
                 <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                     <button class="eliminar" type="submit" class="action-button delete">Eliminar</button>
                 </form>
