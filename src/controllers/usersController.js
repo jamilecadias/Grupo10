@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const bcryptjs = require('bcryptjs')
+const { validationResult } = require('express-validator');
 
 const usersFilePath = path.join(__dirname , '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -16,6 +17,12 @@ const usersController = {
     }, 
 
     processUsersRegister :  (req , res) =>  {
+		const resultValidation = validationResult(req); 
+		 if (resultValidation.errors.length > 0){
+			res.render('./users/register' , {
+				errors : resultValidation.mapped()})
+		 } else {
+
 		let contraseña;
 
 		if (req.body.password == req.body.confirmPassword){
@@ -39,6 +46,7 @@ const usersController = {
 			res.redirect('/users/register')
 		}
 	}
+}
 }
 
 module.exports = usersController;

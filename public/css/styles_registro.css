@@ -224,7 +224,11 @@ span.error {
     box-shadow: inset2px 2px 2px rgba(0,0,0.2);
     text-shadow: none;
 }
-
+ 
+div.text-danger {
+    color: red; 
+    text-decoration: none;
+}
  
 /*Footer del formulario de registro de la página*/
 

@@ -6,7 +6,12 @@
     <%- include ('../partials/header.ejs')%>
  
    <!--Formulario de registro de la pagina-->
-           <main>  
+   <!--<% if (locals.errors){ %>
+    <% for (let oneError in errors) { %>
+        <p><%= errors[oneError].msg  %></p>
+        <% } %>
+    <% } %>-->        
+   <main>  
    <form action="/users/register" method="POST" class="create-form" enctype="multipart/form-data">
            <div>
        <h1 id="titulo">Crear cuenta</h1>
@@ -19,29 +24,38 @@
     </div>  
     <div class="campo">
        <label for="nombre"><strong>Nombre:</strong></label>
-       <input type="text" name="name" id="nombre" placeholder="Ej.: Juan Valdéz"required>
+       <input type="text" name="name" id="nombre" placeholder="Ej.: Juan Valdéz">
    </div>
-  
+   <% if (locals.errors && errors.name) {%>
+  <div class="text-danger"><%= errors.name.msg %>  </div>
+  <% } %>
+
     <div class="campo">
        <label for="email"><strong>E-mail:</strong></label>
-       <input type="email" name="email" id="email" placeholder="Ej.: tunombre@email.com" required >
+       <input type="email" name="email" id="email" placeholder="Ej.: tunombre@email.com">
      </div>
- 
+     <% if (locals.errors && errors.email) {%>
+        <div class="text-danger"><%= errors.email.msg %>  </div>
+        <% } %>
      <div class="campo">
        <label for="telefono"><strong>Telefono (opcional):</strong></label>
        <input type="tel" name="tel" id="telefono" placeholder="Ej.: 1123456789">
      </div>
- 
+     <% if (locals.errors && errors.tel) {%>
+        <div class="text-danger"><%= errors.tel.msg %>  </div>
+        <% } %>
+
      <div class="campo">
          <label for="contraseña"><strong>Contraseña:</strong></label>
-         <input type="password" name="password" id="contraseña" placeholder="**********" required>
-         <span class="error">La contraseña debe tener al menos 8 caracteres</span>
-      </div>
- 
+         <input type="password" name="password" id="contraseña" placeholder="**********">
+         </div>
+      <% if (locals.errors && errors.password) {%>
+        <div class="text-danger"><%= errors.password.msg %>  </div>
+        <% } %>
       <div class="campo">
            <label for="contraseña"><strong>Confirmar contraseña:</strong></label>
-           <input type="password" name="confirmPassword" id="contraseña" placeholder="**********" required>
-           <span class="error">La contraseña debe ser igual a la anterior</span>
+           <input type="password" name="confirmPassword" id="contraseña" placeholder="**********">
+           
        </div>
    <div>
        <button  type="submit" class="boton">CREAR CUENTA</button>
