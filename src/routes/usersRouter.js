@@ -21,9 +21,23 @@ const uploadUser = multer({ storage : storageUsers });
 
 const validations = [
     body('name').notEmpty().withMessage('Este campo debe estar completo.'),
-    body('email').isEmail().withMessage('Debe ser un email valido.'),
+    body('email').notEmpty().withMessage('Este campo debe estar completo.').bail()
+    .isEmail().withMessage('Debe ser un email valido.'),
     body('tel').isLength({ min: 8, max:12 }).withMessage('Debe tener entre 8 y 12 digitos.'),
-    body('password').isLength(({ min: 8 })).withMessage('La contraseña debe tener al menos 8 caracteres.') 
+    body('password').isLength(({ min: 8 })).withMessage('La contraseña debe tener al menos 8 caracteres.'),
+    body('profileImage').custom((value , {req}) => {
+        let file = req.file; 
+        let acceptedExtensions = ['.jpg' , '.gif' , '.png'];
+        if (!file){
+            throw new Error ('Debe subir una imágen.')
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error ('Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}');
+            } return true;
+        }
+    } 
+    ) 
 ]
 
 // Formulario de login
@@ -31,6 +45,6 @@ router.get('/login', usersController.login);
 
 // Registro
 router.get('/register', usersController.register); // Acceso vista
-router.post('/register' , uploadUser.single('profile-image') , validations, usersController.processUsersRegister) // Procesamiento
+router.post('/register' , uploadUser.single('profileImage') , validations, usersController.processUsersRegister) // Procesamiento
 
 module.exports = router; 

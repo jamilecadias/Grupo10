@@ -19,12 +19,22 @@
    </div>
    <fieldset class="grupo"> 
     <div class="campo">
-        <label for="profile-image"><strong>Elegí una foto de perfil:</strong></label>
-        <input type="file" name="profile-image" id="profile-image">
-    </div>  
+        <label for="profileImage"><strong>Elegí una foto de perfil:</strong></label>
+        <input type="file" name="profileImage" id="profileImage">
+        <% if (locals.errors && errors.profileImage) { %>
+        <div class="text-danger"> <%= errors.profileImage.msg %> </div>
+        <% } %>
+    </div>
+      
+    
     <div class="campo">
        <label for="nombre"><strong>Nombre:</strong></label>
-       <input type="text" name="name" id="nombre" placeholder="Ej.: Juan Valdéz">
+       <input 
+       type="text" 
+       name="name" 
+       id="nombre" 
+       placeholder="Ej.: Juan Valdéz"
+       value = "<%= locals.oldData ? oldData.name : null %>">
    </div>
    <% if (locals.errors && errors.name) {%>
   <div class="text-danger"><%= errors.name.msg %>  </div>
@@ -32,14 +42,24 @@
 
     <div class="campo">
        <label for="email"><strong>E-mail:</strong></label>
-       <input type="email" name="email" id="email" placeholder="Ej.: tunombre@email.com">
+       <input 
+       type="text" 
+       name="email" 
+       id="email" 
+       placeholder="Ej.: tunombre@email.com"
+       value = "<%= locals.oldData ? oldData.email : null %>">
      </div>
      <% if (locals.errors && errors.email) {%>
         <div class="text-danger"><%= errors.email.msg %>  </div>
         <% } %>
      <div class="campo">
        <label for="telefono"><strong>Telefono (opcional):</strong></label>
-       <input type="tel" name="tel" id="telefono" placeholder="Ej.: 1123456789">
+       <input 
+       type="tel" 
+       name="tel" 
+       id="telefono" 
+       placeholder="Ej.: 1123456789"
+       value = "<%= locals.oldData ? oldData.tel : null %>">
      </div>
      <% if (locals.errors && errors.tel) {%>
         <div class="text-danger"><%= errors.tel.msg %>  </div>

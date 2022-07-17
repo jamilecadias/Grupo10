@@ -20,7 +20,9 @@ const usersController = {
 		const resultValidation = validationResult(req); 
 		 if (resultValidation.errors.length > 0){
 			res.render('./users/register' , {
-				errors : resultValidation.mapped()})
+				errors : resultValidation.mapped(),
+				oldData: req.body
+			})
 		 } else {
 
 		let contraseña;
@@ -48,5 +50,6 @@ const usersController = {
 	}
 }
 }
+
 
 module.exports = usersController;
