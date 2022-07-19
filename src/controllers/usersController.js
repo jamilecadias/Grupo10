@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const bcryptjs = require('bcryptjs')
 const { validationResult } = require('express-validator');
+const User = require('../../models/User.js');
 
 const usersFilePath = path.join(__dirname , '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -24,7 +25,7 @@ const usersController = {
 				oldData: req.body
 			})
 		 } else {
-
+			
 		let contraseña;
 
 		if (req.body.password == req.body.confirmPassword){
@@ -37,6 +38,7 @@ const usersController = {
 				email: req.body.email,
 				tel: req.body.tel,
 				password: bcryptjs.hashSync(contraseña,12),
+				avatar: req.file.filename
 			}
 
 		users.push(user);
