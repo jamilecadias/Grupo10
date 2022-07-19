@@ -65,22 +65,22 @@ const usersController = {
 	processLogin: (req, res) => {
 		let userToLogin = User.findByEmail('email' , req.body.email);
 		if (userToLogin){
-			//let correctPassword = bcryptjs.compareSync(req.body.contraseña === userToLogin.password);
-			//if (correctPassword) {
-			//	return res.send ('Hola!')
+			let correctPassword = bcryptjs.compareSync(req.body.contraseña === userToLogin.password);
+			if (correctPassword) {
+				return res.send ('Hola!')
 			}
-			//return res.render('./users/login', {
-			//	errors: {
-			//		email: {
-			//			msg: 'Los datos son incorrectos.'
-			//		}
-			//	}
-		//	})
-	//	}
+			return res.render('./users/login', {
+				errors: {
+					email: {
+						msg: 'Los datos son incorrectos.'
+					}
+				}
+			})
+		}
 		return res.render('./users/login', {
 			errors: {
 				email: {
-					msg: 'El mail es incorrecto.'
+					msg: 'Los datos son incorrectos.'
 				}
 			}
 		})
