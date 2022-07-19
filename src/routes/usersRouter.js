@@ -42,6 +42,7 @@ const validations = [
 
 // Formulario de login
 router.get('/login', usersController.login);
+router.post('/login', usersController.processLogin); 
 
 // Registro
 router.get('/register', usersController.register); // Acceso vista

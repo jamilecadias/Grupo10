@@ -19,12 +19,24 @@ const usersController = {
 
     processUsersRegister :  (req , res) =>  {
 		const resultValidation = validationResult(req); 
-		 if (resultValidation.errors.length > 0){
+		if (resultValidation.errors.length > 0){
 			res.render('./users/register' , {
 				errors : resultValidation.mapped(),
 				oldData: req.body
 			})
-		 } else {
+		 } 
+		
+		 let userInDB = User.findByEmail ('email' , req.body.email);
+		if (userInDB){
+			return res.render ('../views/users/register' , {
+				errors: {
+					email : {
+						msg: 'Este email ya está registrado.'
+					},
+					oldData: req.body
+				} } );
+			}
+		 
 			
 		let contraseña;
 
@@ -44,14 +56,37 @@ const usersController = {
 		users.push(user);
 		
 		fs.writeFileSync(usersFilePath, JSON.stringify(users), 'utf-8');
-		res.redirect('/products');
+		res.redirect('/users/login');
 
 		}else{
 			res.redirect('/users/register')
 		}
+	},
+	processLogin: (req, res) => {
+		let userToLogin = User.findByEmail('email' , req.body.email);
+		if (userToLogin){
+			//let correctPassword = bcryptjs.compareSync(req.body.contraseña === userToLogin.password);
+			//if (correctPassword) {
+			//	return res.send ('Hola!')
+			}
+			//return res.render('./users/login', {
+			//	errors: {
+			//		email: {
+			//			msg: 'Los datos son incorrectos.'
+			//		}
+			//	}
+		//	})
+	//	}
+		return res.render('./users/login', {
+			errors: {
+				email: {
+					msg: 'El mail es incorrecto.'
+				}
+			}
+		})
 	}
 }
-}
+
 
 
 module.exports = usersController;

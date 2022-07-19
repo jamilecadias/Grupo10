@@ -1,7 +1,7 @@
 const fs = require ('fs');
 
 const User = {
-    fileName : ('../src/data/users.json'),
+    fileName : ('./src/data/users.json'),
 
     getData : function() {
         return JSON.parse(fs.readFileSync(this.fileName , 'utf-8'));
@@ -11,9 +11,9 @@ const User = {
         return this.getData();
     },
 
-    findByEmail : function (email) {
+    findByEmail : function (field , text) {
         let allUsers = this.findAll();
-        let userFound = allUsers.find(oneUser => oneUser.email === email);
+        let userFound = allUsers.find(oneUser => oneUser[field] === text);
         return userFound;
     }, 
 

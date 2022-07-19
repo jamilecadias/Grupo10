@@ -11,12 +11,17 @@
 
             <section class="form-login"> 
 
-                <form action="/login" method="POST" class="create-form">
+                <form action="../users/login" method="POST" class="create-form">
                 <div class="control-form"> 
                     <label>E-mail</label>
                     <input type="text" name="nombreDelUsuario" class="control" placeholder="Ej: tunombre@email.com ">
                 </div>
-
+                
+                <% if (locals.errors && errors.email) {%>
+                    <div class="text-danger">
+                        <%= errors.email.msg %></div>
+                    <% }%>
+                
                 <div class="control-form"> 
                     <label>Contraseña</label>
                     <input type="password" name="contraseña" class="control" placeholder="********">
