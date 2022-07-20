@@ -3,6 +3,7 @@ const path = require ('path');
 const app = express ();
 const publicPath= path.resolve(__dirname, './public')
 const methodOverride =  require('method-override');
+const session = require('express-session');
 
 const mainRouter = require('./src/routes/mainRouter');
 const productsRouter = require('./src/routes/productsRouter');
@@ -12,6 +13,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(publicPath));
 app.use(methodOverride('_method'));
+app.use(session({
+    secret: "secreto",
+    resave: false,
+    saveUninitialized: false,
+})); 
 
 app.set('view engine', 'ejs');
 

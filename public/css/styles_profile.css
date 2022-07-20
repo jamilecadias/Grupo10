@@ -11,3 +11,27 @@ img  {
     text-align: center;
     padding: 15px;
 }
+
+div.profileField {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    }
+
+button.profileButton {
+        background: #728f63 ;
+        border:0; 
+        font-size: 15px;
+        margin: 15px ;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        font-weight: 500;
+    }
+
+button.profileButton:hover {
+        background: #a7c697;
+        box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+        text-shadow: none;  
+    }
+    

@@ -40,12 +40,15 @@ const validations = [
     ) 
 ]
 
+// Middlewares
+const guestMiddleware = require ('../../middlewares/guestMiddleware'); 
+
 // Formulario de login
-router.get('/login', usersController.login);
+router.get('/login',guestMiddleware, usersController.login);
 router.post('/login', usersController.processLogin); 
 
 // Registro
-router.get('/register', usersController.register); // Acceso vista
+router.get('/register', guestMiddleware, usersController.register); // Acceso vista
 router.post('/register' , uploadUser.single('profileImage') , validations, usersController.processUsersRegister) // Procesamiento
 
 // Profile

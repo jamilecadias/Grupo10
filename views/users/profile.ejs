@@ -7,12 +7,27 @@
     <!-- PROFILE -->
     <main>
         
-            <h1>BIENVENIDO</h1>
+            <h1>Bienvenido <%= user.name %>!</h1>
             <section class="image">
-                <img src="../images/homero.jpg">
+                <img src="../images/usersImages/<%=user.avatar%>">
             </section>
+            <div class = "profileField">
+                <p>Nombre: <%= user.name%> </p>
+            </div>
+            <div class = "profileField">
+                <p>Email: <%= user.email%> </p>
+            </div>
+            <div class = "profileField">
+                <p>Teléfono: <%= user.tel%> </p>
+            </div>
 
-                   
+            <form action='#' method="POST" style="display: inline-flex">
+                <button class="profileButton" type="submit" >Editar</button>
+            </form>
+            <form action='#' method="POST" style="display: inline-flex">
+                <button class="profileButton" type="submit" >Eliminar</button>
+            </form>
+
     </main>
         
 
