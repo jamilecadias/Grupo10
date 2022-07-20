@@ -1,0 +1,13 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+img  {
+    width: 25vw;
+    text-align: center;
+    padding: 15px;
+}

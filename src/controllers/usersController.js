@@ -8,6 +8,7 @@ const usersFilePath = path.join(__dirname , '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
+	fileName : ('../src/data/users.json'), 
 
    	login: (req, res)=>{
         res.render('./users/login')
@@ -24,9 +25,8 @@ const usersController = {
 				errors : resultValidation.mapped(),
 				oldData: req.body
 			})
-		 } 
-		
-		 let userInDB = User.findByEmail ('email' , req.body.email);
+		 } 		
+		let userInDB = User.findByEmail ('email' , req.body.email);
 		if (userInDB){
 			return res.render ('../views/users/register' , {
 				errors: {
@@ -36,14 +36,9 @@ const usersController = {
 					oldData: req.body
 				} } );
 			}
-		 
-			
 		let contraseña;
-
 		if (req.body.password == req.body.confirmPassword){
-
 			contraseña = req.body.password
-
 			let user = {
 				id: (users.length + 1),
 				name: req.body.name,
@@ -52,23 +47,21 @@ const usersController = {
 				password: bcryptjs.hashSync(contraseña,12),
 				avatar: req.file.filename
 			}
-
 		users.push(user);
-		
 		fs.writeFileSync(usersFilePath, JSON.stringify(users), 'utf-8');
 		res.redirect('/users/login');
-
 		}else{
 			res.redirect('/users/register')
 		}
 	},
+	
 	processLogin: (req, res) => {
 		let userToLogin = User.findByEmail('email' , req.body.email);
 		if (userToLogin){
-			let correctPassword = bcryptjs.compareSync(req.body.contraseña === userToLogin.password);
+			let correctPassword = bcryptjs.compareSync(req.body.password , userToLogin.password);
 			if (correctPassword) {
-				return res.send ('Hola!')
-			}
+				return res.redirect('/users/profile')
+			} else {
 			return res.render('./users/login', {
 				errors: {
 					email: {
@@ -76,7 +69,7 @@ const usersController = {
 					}
 				}
 			})
-		}
+		}}
 		return res.render('./users/login', {
 			errors: {
 				email: {
@@ -84,6 +77,9 @@ const usersController = {
 				}
 			}
 		})
+	},
+	profile: (req, res)=> {
+		res.render('../views/users/profile')
 	}
 }
 

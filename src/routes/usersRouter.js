@@ -48,4 +48,7 @@ router.post('/login', usersController.processLogin);
 router.get('/register', usersController.register); // Acceso vista
 router.post('/register' , uploadUser.single('profileImage') , validations, usersController.processUsersRegister) // Procesamiento
 
+// Profile
+router.get('/profile', usersController.profile);
+
 module.exports = router; 
