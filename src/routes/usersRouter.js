@@ -42,6 +42,7 @@ const validations = [
 
 // Middlewares
 const guestMiddleware = require ('../../middlewares/guestMiddleware'); 
+const authMiddleware = require ('../../middlewares/authMiddleware'); 
 
 // Formulario de login
 router.get('/login',guestMiddleware, usersController.login);
@@ -52,6 +53,9 @@ router.get('/register', guestMiddleware, usersController.register); // Acceso vi
 router.post('/register' , uploadUser.single('profileImage') , validations, usersController.processUsersRegister) // Procesamiento
 
 // Profile
-router.get('/profile', usersController.profile);
+router.get('/profile',authMiddleware, usersController.profile);
+
+//Logout
+router.get('/logout/', usersController.logout); 
 
 module.exports = router; 

@@ -20,14 +20,19 @@
             <div class = "profileField">
                 <p>Teléfono: <%= user.tel%> </p>
             </div>
-
+            <div>
+                <form action='/users/logout' method="GET" style="display: inline-flex">
+                    <button class="profileButton" type="submit" >Salir</button>
+                </form>
+            </div>
+            <div>
             <form action='#' method="POST" style="display: inline-flex">
                 <button class="profileButton" type="submit" >Editar</button>
             </form>
             <form action='#' method="POST" style="display: inline-flex">
                 <button class="profileButton" type="submit" >Eliminar</button>
             </form>
-
+            </div>
     </main>
         
 

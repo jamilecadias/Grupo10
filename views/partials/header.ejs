@@ -14,11 +14,16 @@
     <div class="inicio">            
             <a href="/">INICIO </a>
             <a href="/products">PRODUCTOS </a>
-            <a href="/nosotros">NOSOTROS </a>
-            <a href="/users/register">REGISTRATE </a>
-            <a href="/users/login">INGRESAR  </a>
-                        
-    </div>
+           <a href="/nosotros">NOSOTROS</a>
+            <% if (!locals.isLogged) { %> 
+             <a href="/users/register">REGISTRATE </a>
+            <a href="/users/login">INGRESAR </a>
+           <%} else { %> 
+            <a href="/users/profile">HOLA <%= locals.userLogged.name %>!</a>  
+           <% } %>                  
+   
+</div>
+            
     <div class="carrito">
         <a href="/iconoCarrito"><i class="fa-solid fa-cart-shopping"></i></a>
     </div>
