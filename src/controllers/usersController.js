@@ -21,7 +21,7 @@ const usersController = {
     processUsersRegister :  (req , res) =>  {
 		const resultValidation = validationResult(req); 
 		if (resultValidation.errors.length > 0){
-			res.render('./users/register' , {
+			return res.render('./users/register' , {
 				errors : resultValidation.mapped(),
 				oldData: req.body
 			})
