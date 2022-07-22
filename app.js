@@ -4,6 +4,7 @@ const app = express ();
 const publicPath= path.resolve(__dirname, './public')
 const methodOverride =  require('method-override');
 const session = require('express-session');
+const cookies = require('cookie-parser'); 
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -14,6 +15,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 })); 
+app.use(cookies()); 
 
 app.set('view engine', 'ejs');
 

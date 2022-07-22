@@ -15,11 +15,12 @@
             <a href="/">INICIO </a>
             <a href="/products">PRODUCTOS </a>
            <a href="/nosotros">NOSOTROS</a>
-            <% if (!locals.isLogged) { %> 
-             <a href="/users/register">REGISTRATE </a>
+            <% if (locals.isLogged) { %> 
+            <a href="/users/profile">HOLA <%= locals.userLogged.name %>!</a>
+            <%} else { %> 
+            <a href="/users/register">REGISTRATE</a>
             <a href="/users/login">INGRESAR </a>
-           <%} else { %> 
-            <a href="/users/profile">HOLA <%= locals.userLogged.name %>!</a>  
+
            <% } %>                  
    
 </div>
