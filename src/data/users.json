@@ -1,1 +1,74 @@
-[{"id":1,"name":"Mickey Mouse","email":"raton@dh.com","tel":"456897321","password":"$2a$12$MZJaVDv.KKDUjwUFwUSpKelHNxwMPVeLeEW6R2pg8lpPHWeYji3xG","avatar":"user-1658257955145.jpg"},{"id":2,"name":"Lionel Messi","email":"leo@dh.com","tel":"7894556212","password":"$2a$12$LN8vkJ.YlB8RiFH.fStPTeq2zzeDrqSB4xW4URzzByu4g6AHntVRu","avatar":"user-1658317711160.jpg"},{"id":3,"name":"Nico","email":"nico@dh.com","tel":"454686422","password":"$2a$12$ry6W/NfnFH/TqowbREG7zOV1oHqNS8feg/Pox/yC0Ca0nGWa3hGQ.","avatar":"user-1658321562780.png"},{"id":4,"name":"Cosme Fulanito","email":"cosme@dh.com","tel":"7878484545","password":"$2a$12$wQV9dS4472PJkGt.jXiIa.St7Q6EkWvrc0Faa5yCUUhGTwwvgNNEu","avatar":"user-1658495607255.jpg"},{"id":5,"name":"Jon","email":"jonsnow@got.com","tel":"12345678","password":"$2a$12$m2Pce3XQIkxhev2KuWRdDeKz5n8EXB28i8vzWUESLiT2b.FwHrrXu","avatar":"user-1658525734833.jpeg"},{"id":6,"name":"Arya Stark","email":"aryastark@got.com","tel":"23456789","password":"$2a$12$dhdHDAHJn4bTRGEBj8VxFe4Lzg2LuuIzAzvhchlHntxx4y2xe2Oui","avatar":"user-1658528439505.png"},{"id":7,"name":"Marcelo Gallardo","email":"muneco@dh.com","tel":"123456789","password":"$2a$12$uri7XxyTQbSfaqwQax/WLefMO1IulQhkPkzmGVrutsbe6i2dyV5Em","avatar":"user-1658581317174.jpg"},{"id":8,"name":"Dustin Henderson","email":"dustin@dh.com","tel":"123456789","password":"$2a$12$tGyMzw3JSz.ODp1VRV5zfefoivGHS7SdGORc.wyO68PHGG3M3prTi","avatar":"user-1658581396207.gif"}]
+[
+    {
+        "id": 1,
+        "name": "Mickey Mouse",
+        "email": "raton@dh.com",
+        "tel": "456897321",
+        "password": "$2a$12$MZJaVDv.KKDUjwUFwUSpKelHNxwMPVeLeEW6R2pg8lpPHWeYji3xG",
+        "avatar": "user-1658257955145.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Lionel Messi",
+        "email": "leo@dh.com",
+        "tel": "7894556212",
+        "password": "$2a$12$LN8vkJ.YlB8RiFH.fStPTeq2zzeDrqSB4xW4URzzByu4g6AHntVRu",
+        "avatar": "user-1658317711160.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Nico",
+        "email": "nico@dh.com",
+        "tel": "454686422",
+        "password": "$2a$12$ry6W/NfnFH/TqowbREG7zOV1oHqNS8feg/Pox/yC0Ca0nGWa3hGQ.",
+        "avatar": "user-1658321562780.png"
+    },
+    {
+        "id": 4,
+        "name": "Cosme Fulanito",
+        "email": "cosme@dh.com",
+        "tel": "7878484545",
+        "password": "$2a$12$wQV9dS4472PJkGt.jXiIa.St7Q6EkWvrc0Faa5yCUUhGTwwvgNNEu",
+        "avatar": "user-1658495607255.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Jon",
+        "email": "jonsnow@got.com",
+        "tel": "12345678",
+        "password": "$2a$12$m2Pce3XQIkxhev2KuWRdDeKz5n8EXB28i8vzWUESLiT2b.FwHrrXu",
+        "avatar": "user-1658525734833.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Arya Stark",
+        "email": "aryastark@got.com",
+        "tel": "23456789",
+        "password": "$2a$12$dhdHDAHJn4bTRGEBj8VxFe4Lzg2LuuIzAzvhchlHntxx4y2xe2Oui",
+        "avatar": "user-1658528439505.png"
+    },
+    {
+        "id": 7,
+        "name": "Marcelo Gallardo",
+        "email": "muneco@dh.com",
+        "tel": "123456789",
+        "password": "$2a$12$uri7XxyTQbSfaqwQax/WLefMO1IulQhkPkzmGVrutsbe6i2dyV5Em",
+        "avatar": "user-1658581317174.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Dustin Henderson",
+        "email": "dustin@dh.com",
+        "tel": "123456789",
+        "password": "$2a$12$tGyMzw3JSz.ODp1VRV5zfefoivGHS7SdGORc.wyO68PHGG3M3prTi",
+        "avatar": "user-1658581396207.gif"
+    },
+    {
+        "id": 9,
+        "name": "alejandro",
+        "email": "alejomoro@gmail.com",
+        "tel": "3124114694",
+        "password": "$2a$12$x9Yo9cgZV9J0N/JCGIpb6.q2UBzMWcDdLnvuNR8AUcJb.D0KEPlya",
+        "avatar": "user-1658895147164.png"
+    }
+]
