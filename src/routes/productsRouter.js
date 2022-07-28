@@ -30,7 +30,7 @@ router.post('/', uploadProduct.single('image'), productsController.store); // Pr
 
 // Formulario de edición
 router.get('/edit/:id', productsController.edit); // Acceso vista
-router.put('/:id', productsController.update);  //Envío
+router.put('/:id',uploadProduct.single('image'), productsController.update);  //Envío
 router.delete('/:id', productsController.destroy); // Eliminar
 
 module.exports = router; 

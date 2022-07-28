@@ -8,7 +8,7 @@
  
    <!--Formulario de registro de la pagina-->
     <main>  
-   <form action="/products/:id?_method=PUT" method="POST" class="create-form">
+   <form action="/products/:id?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
            <div>
        <h1 id="titulo">Editar producto</h1>
       <!-- <p id="subtitulo">Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>-->
@@ -16,22 +16,18 @@
    <fieldset class="grupo"> 
       <div class="campo">
        <label for="nombre"><strong>Nombre del producto:</strong></label>
-       <input type="text" name="name" id="nombre" placeholder="<%= productToEdit.name %>">
+       <input type="text" name="name" id="nombre" value="<%= productToEdit.name %>">
    </div>
   
      <div class="campo">
        <label for="precio"><strong>Precio:</strong></label>
-       <input type="number" name="price" id="precio" placeholder="<%= productToEdit.price %>"> 
+       <input type="number" name="price" id="precio" value="<%= productToEdit.price %>"> 
      </div>
      <br>
 
       <div class="campo">
        <label for="descripción"><strong>Descripción:</strong></label>
-       <textarea name="description" id="descripción" placeholder="Café liofilizado Juan Valdez es un café rico y fácil de preparar que le dará un toque cálido y tradicional a tus mañanas.
-
-       Su practicidad lo convierten en el aliado perfecto cada vez que quieras disfrutar un café con sabor tradicional y sin complicaciones.
-       
-       ¡Llévalo y aprovecha la calidad y sabor con los que Juan Valdez sabe sorprendernos!" ><%= productToEdit.description %></textarea>
+       <textarea name="description" id="descripción" ? ><%= productToEdit.description %></textarea>
      </div>
 
      <div class="campo">

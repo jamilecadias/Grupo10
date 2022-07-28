@@ -56,7 +56,7 @@ const productsController = {
 				products[i].price = req.body.price;
 				products[i].description = req.body.description;
                 /*products[i].features = req.body.features;*/
-                products[i].image = req.body.image;
+                products[i].image = req.file.filename;
 			}
 		};
 		fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');

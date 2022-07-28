@@ -188,7 +188,7 @@ div.actualizar {
     border-radius: 5px;
 }
 
-button.actualizar-carrito {
+a.actualizar-carrito {
     border: solid #728f63 1px;
     background-color: #728f63;
     text-decoration: none;
@@ -197,7 +197,7 @@ button.actualizar-carrito {
     padding: 2px;
     }
 
-.actualizar button:hover {
+.actualizar a:hover {
     background: #a7c697;
     text-shadow: none;
     border: solid #a7c697 1px;
@@ -260,7 +260,7 @@ section.total div.finalizar {
     border-radius: 5px;
    }
 
- button.finalizar-compra {
+ a.finalizar-compra {
      border: solid #728f63 1px;
      background-color: #728f63;
      text-decoration: none;
@@ -269,7 +269,7 @@ section.total div.finalizar {
      padding: 2px;
  }
 
- div.finalizar button:hover {
+ div.finalizar a:hover {
     background: #a7c697;
     text-shadow: none;
     border: solid #a7c697 1px;
