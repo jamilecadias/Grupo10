@@ -63,3 +63,26 @@
 
 **5. Dejar de hacer.**
 - Quedarnos con dudas que afecten al desarrollo del sprint. 
+
+## Sprint 4
+
+**1. Comenzar a hacer**
+- Implementar estructura y escritura weeklies. 
+- Dividir las tareas.
+ 
+**2. Hacer más**
+- Consultar temas o contenidos que no quedan del todo claro hasta incorporarlos.
+- Comunicar inconvenientes personales para realizar el trabajo asignado.
+- Participar en las decisiones respecto al trabajo realizado por otros compañeros. 
+ 
+**3. Continuar haciendo**
+- Mantener las reuniones semanales.
+- Priorizar las actividades del sprint.
+- Mantener una o más fechas antes de la entrega para chequear si hay que hacer cambios o mejoras.
+- Redactar brevemente lo que hablamos en la reunión.
+ 
+**4. Hacer menos**
+ 
+ 
+**5. Dejar de hacer.**
+- Quedarnos con dudas que afecten al desarrollo del sprint.
