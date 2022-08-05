@@ -26,7 +26,10 @@ main{
 .descripcion{
     /* margin: auto; */
     width: 100%;
-    text-align: justify;
+    text-align: center;
+    font-size: larger;
+    padding: 20px;
+    margin-bottom: 15px;
 }
 .descripcion h4{
     text-align: center;
