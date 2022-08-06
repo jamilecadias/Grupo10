@@ -121,6 +121,21 @@ header .form .submit {
 .carrito{
     font-size: 4;
 }
+#caja-producto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+#producto{
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;    
+}
+#producto:hover{
+    text-shadow: none;
+    border: solid #a7c697 1px;
+}
 }
 
 /*MAIN*/
@@ -139,6 +154,7 @@ main section.banner img {
 h2{
     text-align: center;
 }
+
  div img {
      width: 100%;
      padding: 20px;

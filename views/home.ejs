@@ -12,39 +12,45 @@
         <br>
         <section class="productos">
         <h2>NUESTROS CAFÉS</h2>
-        <% for(let producto of products){ %>
-        <div class="imagen-cafe">
-            <a href="/products/<%= producto.id %>"><img src="/images/<%= producto.image %>"></a>
-        </div>
-        <div class="datos-producto">
-            <a href="#" class="descrpcion-juan-valdez"><%= producto.name %></a>
-            <p class="precio"><%= producto.price  %></p>
-            <a href="/products/detail/<%= producto.id %>" class="boton">Ver más</a>
+        <div id="caja-producto">
             
+            <% for(let producto of products){ %>
+            <div id="producto">
+                
+                <div class="imagen-cafe">
+                <a href="/products/<%= producto.id %>"><img src="/images/<%= producto.image %>"></a>
+            </div>
+            <div class="datos-producto">
+                <a href="#" class="descrpcion-juan-valdez"><%= producto.name %></a>
+                <p class="precio"><%= producto.price  %></p>
+                <a href="/products/detail/<%= producto.id %>" class="boton">Ver más</a>
+                
+            </div>
+    
+    
+         <!--   <div class="imagen-cafe">
+                <a href="#"><img src="/images/pilao.jpg"></a>
+            </div>
+            <div class="datos-producto">    
+                <a href="#" class="descrpcion-pilao">Café Pilao Tradicional Brasil 500g</a>
+                <p class="precio">$3500</p>
+                <a href="#" class="boton">Ver más</a>
+            </div>
+    
+    
+    
+            <div class="imagen-cafe">
+                <a href="#"><img src="/images/trung.jpeg"></a>
+            </div>
+            <div class="datos-producto">
+                <a href="#" class="descrpcion-trung">Café Trung Nguyen Gourmet Blend Vietnam 500g</a>
+                <p class="precio">$10000</p>
+                <a href="#" class="boton">Ver más</a>
+            </div>
+            <br>  -->
+            </div>
+            <% } %>
         </div>
-
-
-     <!--   <div class="imagen-cafe">
-            <a href="#"><img src="/images/pilao.jpg"></a>
-        </div>
-        <div class="datos-producto">    
-            <a href="#" class="descrpcion-pilao">Café Pilao Tradicional Brasil 500g</a>
-            <p class="precio">$3500</p>
-            <a href="#" class="boton">Ver más</a>
-        </div>
-
-
-
-        <div class="imagen-cafe">
-            <a href="#"><img src="/images/trung.jpeg"></a>
-        </div>
-        <div class="datos-producto">
-            <a href="#" class="descrpcion-trung">Café Trung Nguyen Gourmet Blend Vietnam 500g</a>
-            <p class="precio">$10000</p>
-            <a href="#" class="boton">Ver más</a>
-        </div>
-        <br>  -->
-        <% } %>
         </section>
 
 
