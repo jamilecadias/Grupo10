@@ -1,41 +1,54 @@
 const path = require('path');
 const fs = require('fs');
+let db = require("../database/models")
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
     
-    detail: (req, res)=>{
-        let idProducto = req.params.id;
-		let product;
-		for (let i=0; i<products.length; i++) {
-            if (products[i].id == idProducto) {
-				product = products[i];
-			}
-		}
-        res.render('./products/producto',{product})
-    }, 
-
-    store: (req, res) => {
-		let product = {
-		...req.body,
-		image : req.file.filename
-		}
-		product.id = (products.length + 1);
-		products.push(product);
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
-		res.redirect('/products')
-	},
+    products: (req, res)=>{
+		db.Products.findAll()
+			.then(function(products) {
+			res.render('./products/lista_productos',{products})	
+			})
+         }, 
+	
+	detail: (req, res)=>{
+        db.Products.findByPk(req.params.id)
+			.then(product => 
+		//let idProducto = req.params.id;
+		//let product;
+		//for (let i=0; i<products.length; i++) {
+         //   if (products[i].id == idProducto) {
+		//		product = products[i];
+			 res.render('./products/producto',{product})
+		)}, 
 
     create: (req, res)=>{
         res.render('cargar_productos')
     },
 
-    products: (req, res)=>{
-        res.render('./products/lista_productos',{products} )
-    },
+	store: (req, res)=> {
+			db.Products.create({
+				 name: req.body.name,
+				 origin_id: req.body.origin,
+				 price: req.body.price,
+				 description: req.body.description,
+				 image: req.file.filename }) 
+				 	.then(res.redirect ('/products'))
+	//	let product = {
+	//	
+	//	}
+	//	product.id = (products.length + 1);
+	//	products.push(product);
+
+	//	fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
+	},
+
+   
+
+   
 
     edit: (req,res)=>{
         let id = req.params.id;

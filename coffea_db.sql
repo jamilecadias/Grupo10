@@ -51,14 +51,14 @@ DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
-  `origin_id` int(11) NOT NULL,
+  `origin_id` int(11) DEFAULT NULL,
   `price` int(11) NOT NULL,
   `description` longtext NOT NULL,
   `image` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `origin_id` (`origin_id`),
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`origin_id`) REFERENCES `origins` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Café Juan Valdéz Premium Selection Colombia 340g',1,5000,'Café liofilizado Juan Valdez es un café rico y fácil de preparar que le dará un toque cálido y tradicional a tus mañanas. Su practicidad lo convierten en el aliado perfecto cada vez que quieras disfrutar un café con sabor tradicional y sin complicaciones. ¡Llévalo y aprovecha la calidad y sabor con los que Juan Valdez sabe sorprendernos!','juan_valdez.jpg'),(2,'Café Pilao Tradicional Brasil 500g',2,3500,'El café Tradicional Pilão, de intensidad 8, está disponible en la versión de vacío de 500 g, tiene un punto de tueste acentuado y un proceso de molienda fina y uniforme, que garantizan y conservan su sabor fuerte y con cuerpo. Es perfecto para tu día a día.','pilao.jpg'),(3,'Café Trung Nguyen Gourmet Blend Vietnam 500g',3,10000,'Trung Nguyen Gourmet Blend es una combinación cuidadosamente seleccionada de café Arábica, Robusta, Chari (o Excelsa) y Catimore. La mezcla es increíblemente fragante y llena la habitación con aromas de especias, chocolates y frutas.','trung.jpeg');
+INSERT INTO `products` VALUES (1,'Café Juan Valdéz Premium Selection Colombia 340g',1,5000,'Café liofilizado Juan Valdez es un café rico y fácil de preparar que le dará un toque cálido y tradicional a tus mañanas. Su practicidad lo convierten en el aliado perfecto cada vez que quieras disfrutar un café con sabor tradicional y sin complicaciones. ¡Llévalo y aprovecha la calidad y sabor con los que Juan Valdez sabe sorprendernos!','juan_valdez.jpg'),(2,'Café Pilao Tradicional Brasil 500g',2,3500,'El café Tradicional Pilão, de intensidad 8, está disponible en la versión de vacío de 500 g, tiene un punto de tueste acentuado y un proceso de molienda fina y uniforme, que garantizan y conservan su sabor fuerte y con cuerpo. Es perfecto para tu día a día.','pilao.jpg'),(3,'Café Trung Nguyen Gourmet Blend Vietnam 500g',3,10000,'Trung Nguyen Gourmet Blend es una combinación cuidadosamente seleccionada de café Arábica, Robusta, Chari (o Excelsa) y Catimore. La mezcla es increíblemente fragante y llena la habitación con aromas de especias, chocolates y frutas.','trung.jpeg'),(5,'Café La Virginia Clasico 250g',NULL,200,'Un rico cafecito! ','product-1660412139523.jpg');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,4 +108,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-11 20:30:57
+-- Dump completed on 2022-08-13 14:39:46
