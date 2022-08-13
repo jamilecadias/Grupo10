@@ -3,6 +3,7 @@ const fs = require('fs');
 const bcryptjs = require('bcryptjs')
 const { validationResult } = require('express-validator');
 const User = require('../../models/User.js');
+let db = require("../database/models")
 
 const usersFilePath = path.join(__dirname , '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -84,6 +85,8 @@ const usersController = {
 			}
 		})
 	},
+
+	
 	profile: (req, res)=> {
 		res.render('../views/users/profile' , {
 			user: req.session.userLogged
