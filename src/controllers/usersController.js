@@ -5,11 +5,11 @@ const { validationResult } = require('express-validator');
 const User = require('../../models/User.js');
 let db = require("../database/models")
 
-const usersFilePath = path.join(__dirname , '../data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+/*const usersFilePath = path.join(__dirname , '../data/users.json');
+let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));*/
 
 const usersController = {
-	fileName : ('../src/data/users.json'), 
+	fileName : ('../src/data/users.json'),
 
    	login: (req, res)=>{
         res.render('./users/login')
@@ -26,8 +26,28 @@ const usersController = {
 				errors : resultValidation.mapped(),
 				oldData: req.body
 			})
-		 } 		
-		let userInDB = User.findByEmail ('email' , req.body.email);
+		 } 	
+		if (req.body.password == req.body.confirmPassword){
+			let contraseña;
+			contraseña = req.body.password
+		db.Users.create({
+				name: req.body.name,
+				email: req.body.email,
+				tel: req.body.tel,
+				password: bcryptjs.hashSync(contraseña,12),
+				avatar: req.file.filename
+		}).then(usuario => res.redirect ('/users/login'))
+		.catch(error => res.render('../views/users/register' , {
+			errors: {
+				email : {
+					msg: 'Este email ya está registrado.'
+				},
+				oldData: req.body
+			} } ))
+	} else{
+			res.redirect('/users/register')
+		}
+		/*let userInDB = User.findByEmail ('email' , req.body.email);
 		if (userInDB){
 			return res.render ('../views/users/register' , {
 				errors: {
@@ -53,11 +73,14 @@ const usersController = {
 		res.redirect('/users/login');
 		}else{
 			res.redirect('/users/register')
-		}
+		}*/
 	},
 	
 	processLogin: (req, res) => {
-		let userToLogin = User.findByEmail('email' , req.body.email);
+		let userToLogin = db.Users.findOne({
+			where: {
+				email : req.body.email}})
+				.then(user => { return user })
 		if (userToLogin){
 			let correctPassword = bcryptjs.compareSync(req.body.password , userToLogin.password);
 			if (correctPassword) {
@@ -84,6 +107,37 @@ const usersController = {
 				}
 			}
 		})
+
+
+
+
+		/*let userToLogin = User.findByEmail('email' , req.body.email);
+		if (userToLogin){
+			let correctPassword = bcryptjs.compareSync(req.body.password , userToLogin.password);
+			if (correctPassword) {
+				delete userToLogin.password; 
+				req.session.userLogged = userToLogin;
+				if(req.body.recordarme) {
+					res.cookie('userEmail' , req.body.email, { maxAge: (1000 * 60) * 3 } ); 
+				}
+				
+				return res.redirect('/users/profile')
+			} else {
+			return res.render('./users/login', {
+				errors: {
+					email: {
+						msg: 'Los datos son incorrectos.'
+					}
+				}
+			})
+		}}
+		return res.render('./users/login', {
+			errors: {
+				email: {
+					msg: 'Los datos son incorrectos.'
+				}
+			}
+		})*/
 	},
 
 	

@@ -34,8 +34,8 @@ const productsController = {
 				 name: req.body.name,
 				 origin_id: req.body.origin,
 				 price: req.body.price,
-				 description: req.body.description
-				 /*image: req.file.filename*/}) 
+				 description: req.body.description,
+				 image: req.file.filename}) 
 			.then(res.redirect ('/products'))
 			.catch(error => res.send(error))
 		
@@ -81,7 +81,7 @@ const productsController = {
 			 where: {id: req.params.id}, force: true
 			})
 
-			.then (products =>
+			.then (product =>
 				res.redirect('/products') 
 				)
 			.catch(error => res.send(error))
