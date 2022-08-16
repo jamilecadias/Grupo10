@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `coffea_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `coffea_db`;
 -- MariaDB dump 10.19  Distrib 10.4.24-MariaDB, for Win64 (AMD64)
 --
 -- Host: 127.0.0.1    Database: coffea_db
@@ -58,7 +56,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `origin_id` (`origin_id`),
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`origin_id`) REFERENCES `origins` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +65,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Café Juan Valdéz Premium Selection Colombia 340g',1,5000,'Café liofilizado Juan Valdez es un café rico y fácil de preparar que le dará un toque cálido y tradicional a tus mañanas. Su practicidad lo convierten en el aliado perfecto cada vez que quieras disfrutar un café con sabor tradicional y sin complicaciones. ¡Llévalo y aprovecha la calidad y sabor con los que Juan Valdez sabe sorprendernos!','juan_valdez.jpg'),(2,'Café Pilao Tradicional Brasil 500g',2,3500,'El café Tradicional Pilão, de intensidad 8, está disponible en la versión de vacío de 500 g, tiene un punto de tueste acentuado y un proceso de molienda fina y uniforme, que garantizan y conservan su sabor fuerte y con cuerpo. Es perfecto para tu día a día.','pilao.jpg'),(3,'Café Trung Nguyen Gourmet Blend Vietnam 500g',3,10000,'Trung Nguyen Gourmet Blend es una combinación cuidadosamente seleccionada de café Arábica, Robusta, Chari (o Excelsa) y Catimore. La mezcla es increíblemente fragante y llena la habitación con aromas de especias, chocolates y frutas.','trung.jpeg'),(5,'Café La Virginia Clasico 250g',NULL,200,'Un rico cafecito! ','product-1660412139523.jpg');
+INSERT INTO `products` VALUES (1,'Café Juan Valdéz Premium Selection Colombia 340g',1,5000,'Café liofilizado Juan Valdez es un café rico y fácil de preparar que le dará un toque cálido y tradicional a tus mañanas. Su practicidad lo convierten en el aliado perfecto cada vez que quieras disfrutar un café con sabor tradicional y sin complicaciones. ¡Llévalo y aprovecha la calidad y sabor con los que Juan Valdez sabe sorprendernos!','juan_valdez.jpg'),(2,'Café Pilao Tradicional Brasil 500g',2,3500,'El café Tradicional Pilão, de intensidad 8, está disponible en la versión de vacío de 500 g, tiene un punto de tueste acentuado y un proceso de molienda fina y uniforme, que garantizan y conservan su sabor fuerte y con cuerpo. Es perfecto para tu día a día.','pilao.jpg'),(3,'Café Trung Nguyen Gourmet Blend Vietnam 500g',3,10000,'Trung Nguyen Gourmet Blend es una combinación cuidadosamente seleccionada de café Arábica, Robusta, Chari (o Excelsa) y Catimore. La mezcla es increíblemente fragante y llena la habitación con aromas de especias, chocolates y frutas.','trung.jpeg'),(5,'Café La Virginia Clasico 250g',NULL,200,'Un rico cafecito! ','product-1660412139523.jpg'),(6,'Café 3 Coraçoes Tradicional 500gr',NULL,1500,'Un café brasileño! ','product-1660575666543.jpg');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +85,7 @@ CREATE TABLE `users` (
   `avatar` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,6 +94,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Nicolas','nico@dh.com',789456123,'$2a$12$SsToX3p0ZHC9yl5eBRCdJ.LQN7Rw3vTUU1m6Ao','user-1660651644406.png'),(2,'Lionel Messi','lionelmessi@dh.com',654213879,'$2a$12$82uyByapL7QqyH9H9KXXm.juFgxCuhhG5vwLCd','user-1660651754822.jpg'),(4,'Cosme Fulanito','cosmefulanito@dh.com',0,'$2a$12$oBMfMT/E1NnuwyySr8J.weXADrM0ztRn5GOYLB','user-1660651901845.png');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -108,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-13 14:39:46
+-- Dump completed on 2022-08-16  9:12:49
