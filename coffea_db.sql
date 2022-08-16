@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `coffea_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `coffea_db`;
 -- MariaDB dump 10.19  Distrib 10.4.24-MariaDB, for Win64 (AMD64)
 --
 -- Host: 127.0.0.1    Database: coffea_db
@@ -107,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-16  9:12:49
+-- Dump completed on 2022-08-16  9:36:35
