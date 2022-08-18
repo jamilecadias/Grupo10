@@ -28,13 +28,12 @@ const usersController = {
 			})
 		 } 	
 		if (req.body.password == req.body.confirmPassword){
-			let contraseña;
-			contraseña = req.body.password
+			let contrasena = req.body.password;
 		db.Users.create({
 				name: req.body.name,
 				email: req.body.email,
 				tel: req.body.tel,
-				password: bcryptjs.hashSync(contraseña,12),
+				password: bcryptjs.hashSync(contrasena,10),
 				avatar: req.file.filename
 		}).then(usuario => res.redirect ('/users/login'))
 		.catch(error => res.render('../views/users/register' , {
@@ -77,22 +76,25 @@ const usersController = {
 	},
 	
 	processLogin: (req, res) => {
-		let userToLogin = db.Users.findOne({
+		db.Users.findOne({
 			where: {
-				email : req.body.email}})
-				.then(user => { return user })
-		if (userToLogin){
-			let correctPassword = bcryptjs.compareSync(req.body.password , userToLogin.password);
-			if (correctPassword) {
-				delete userToLogin.password; 
-				req.session.userLogged = userToLogin;
-				if(req.body.recordarme) {
-					res.cookie('userEmail' , req.body.email, { maxAge: (1000 * 60) * 3 } ); 
-				}
+				email : req.body.email},
+			raw: true
+			})
+				.then(user => { 
+					if (user){
+						let pass = req.body.password;
+						let correctPassword = bcryptjs.compareSync(pass , user.password);
+						if (correctPassword) {
+						delete user.password; 
+						req.session.userLogged = user;
+					if(req.body.recordarme) {
+						res.cookie('userEmail' , req.body.email, { maxAge: (1000 * 60) * 3 } ); 
+						}
 				
-				return res.redirect('/users/profile')
-			} else {
-			return res.render('./users/login', {
+					return res.redirect('/users/profile')
+					} else {
+				return res.render('./users/login', {
 				errors: {
 					email: {
 						msg: 'Los datos son incorrectos.'
@@ -107,6 +109,9 @@ const usersController = {
 				}
 			}
 		})
+				})
+				
+	
 
 
 

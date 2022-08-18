@@ -83,11 +83,11 @@ CREATE TABLE `users` (
   `name` varchar(45) NOT NULL,
   `email` varchar(100) NOT NULL,
   `tel` int(15) DEFAULT NULL,
-  `password` varchar(45) NOT NULL,
-  `avatar` varchar(45) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `avatar` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +96,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Nicolas','nico@dh.com',789456123,'$2a$12$SsToX3p0ZHC9yl5eBRCdJ.LQN7Rw3vTUU1m6Ao','user-1660651644406.png'),(2,'Lionel Messi','lionelmessi@dh.com',654213879,'$2a$12$82uyByapL7QqyH9H9KXXm.juFgxCuhhG5vwLCd','user-1660651754822.jpg'),(4,'Cosme Fulanito','cosmefulanito@dh.com',0,'$2a$12$oBMfMT/E1NnuwyySr8J.weXADrM0ztRn5GOYLB','user-1660651901845.png');
+INSERT INTO `users` VALUES (10,'Nicolas','nico@dh.com',554846656,'$2a$10$2R0BC6zS4.vol9P0hMuRQeyNRR4wKFmyC6Q516NP8sB6e1d0jyewK','user-1660792226096.png');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -109,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-16  9:36:35
+-- Dump completed on 2022-08-18  0:12:37
