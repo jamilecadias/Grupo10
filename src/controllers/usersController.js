@@ -156,9 +156,17 @@ const usersController = {
 		res.clearCookie('userEmail'); 
 		req.session.destroy();
 		return res.redirect('/')
-	}
+	}, 
 
-	}
+	edit: (req , res) => {
+		db.Users.findByPk(req.params.id)
+			.then(userToEdit => 
+		res.render('../views/users/edit_user', { userToEdit })
+		
+		)}, 
+	
+}
+	
 
 
 

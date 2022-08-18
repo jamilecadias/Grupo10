@@ -36,3 +36,17 @@ button.profileButton:hover {
         text-shadow: none;  
     }
     
+    button.profileButton2 {
+        font-size: 15px;
+        color: rgb(115, 117,115);
+        padding: 15px;
+        font-weight: 500;
+        border: none;
+        background: none;
+    }
+
+    button.profileButton2:hover {
+        color: #a7c697;
+        box-shadow: inset2px 2px 2px rgba(0,0,0.2);
+        text-shadow: none;  
+    }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head.ejs')%>
+    <link rel="stylesheet" href="/css/styles_cargar_productos.css">
+    <link rel="stylesheet" href="/css/styles.css">
+<body>
+    <%- include ('../partials/header.ejs')%>
+ 
+   <!--Formulario de registro de la pagina-->
+    <main>  
+   <form action="/users/:id?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
+           <div>
+       <h1 id="titulo">Editar perfil</h1>
+   </div>
+   <fieldset class="grupo"> 
+    
+    <div class="campo">
+        <label class="imagen-producto"><strong>Elegí tu foto de perfil</strong></label>
+        <input type="file" name="avatar">
+        </div>
+    
+    <div class="campo">
+       <label for="nombre"><strong>Nombre:</strong></label>
+       <input type="text" name="name" id="nombre" value="<%= userToEdit.name %>">
+   </div>
+  
+     <div class="campo">
+       <label for="precio"><strong>Email:</strong></label>
+       <input type="text" name="email"  value="<%= userToEdit.email %>"> 
+     </div>
+     <br>
+
+      <div class="campo">
+       <label for="descripción"><strong>Teléfono:</strong></label>
+       <input name="tel"  value= "<%= userToEdit.tel %>">
+     </div>
+
+     <div class="campo">
+        <label for="descripción"><strong>Teléfono:</strong></label>
+        <input name="password"  placeholder= "********">
+      </div>
+
+        </div>
+
+   <div>
+       <button  type="submit" class="boton">GUARDAR</button>
+   </div>
+</fieldset>
+   </main>
+       </form>
+ 
+       <!--Footer del formulario de registro de la pagina -->
+ 
+       <%- include ('../partials/footer.ejs')%>
+    
+</body>
+
+</html>
