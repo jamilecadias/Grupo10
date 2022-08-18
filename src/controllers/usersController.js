@@ -165,6 +165,28 @@ const usersController = {
 		
 		)}, 
 	
+
+	update: (req, res) => {
+
+		db.Users.update(
+			{
+				name: req.body.name,
+				tel: req.body.tel,
+				// avatar: req.file.filename
+				
+				
+			},
+			{
+			 where: {id: req.params.id}, force: true
+			})
+
+			.then (user =>
+				res.redirect('../views/users/profile') 
+				)
+			.catch(error => res.send(error))
+
+		
+					},
 }
 	
 

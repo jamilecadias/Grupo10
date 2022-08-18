@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-let db = require("../database/models")
+let db = require("../database/models");
+const { Console } = require('console');
 
 /*const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
@@ -39,18 +40,7 @@ const productsController = {
 			.then(res.redirect ('/products'))
 			.catch(error => res.send(error))
 		
-	//	let product = {
-	//	
-	//	}
-	//	product.id = (products.length + 1);
-	//	products.push(product);
-
-	//	fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
-	},
-
-   
-
-   
+		},   
 
     edit: (req,res)=>{
 
@@ -80,9 +70,11 @@ const productsController = {
 			{
 			 where: {id: req.params.id}, force: true
 			})
-
+             
 			.then (product =>
 				res.redirect('/products') 
+				
+
 				)
 			.catch(error => res.send(error))
 
