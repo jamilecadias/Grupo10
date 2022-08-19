@@ -20,13 +20,11 @@
    <fieldset class="grupo"> 
     <div class="campo">
         <label for="profileImage"><strong>Elegí una foto de perfil:</strong></label>
-        <input type="file" name="profileImage" id="profileImage">
-        <% if (locals.errors && errors.profileImage) { %>
-        <div class="text-danger"> <%= errors.profileImage.msg %> </div>
+        <input type="file" name="avatar" id="profileImage">
+        <% if (locals.errors && errors.avatar) { %>
+        <div class="text-danger"> <%= errors.avatar.msg %> </div>
         <% } %>
     </div>
-      
-    
     <div class="campo">
        <label for="nombre"><strong>Nombre:</strong></label>
        <input 
@@ -55,7 +53,7 @@
      <div class="campo">
        <label for="telefono"><strong>Telefono (opcional):</strong></label>
        <input 
-       type="tel" 
+       type="text" 
        name="tel" 
        id="telefono" 
        placeholder="Ej.: 1123456789"

@@ -70,11 +70,8 @@ const productsController = {
 			{
 			 where: {id: req.params.id}, force: true
 			})
-             
-			.then (product =>
+			.then (() =>
 				res.redirect('/products') 
-				
-
 				)
 			.catch(error => res.send(error))
 
@@ -91,9 +88,7 @@ const productsController = {
 		//fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8'); /*
 					},
 	
-
     destroy: (req, res) => {
-
 		db.Products.destroy({
 			where: {id: req.params.id }
 		   })

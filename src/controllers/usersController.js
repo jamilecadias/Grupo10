@@ -159,11 +159,11 @@ const usersController = {
 	}, 
 
 	edit: (req , res) => {
-		db.Users.findByPk(req.params.id)
-			.then(userToEdit => 
-		res.render('../views/users/edit_user', { userToEdit })
+		//db.Users.findByPk(req.params.id)
+		//	.then(userToEdit => 
+		res.render('../views/users/edit_user', { userToEdit : req.session.userLogged })
 		
-		)}, 
+		}, 
 	
 
 	update: (req, res) => {
@@ -171,13 +171,26 @@ const usersController = {
 			{
 				name: req.body.name,
 				tel: req.body.tel,
-				//avatar: req.file.filename	
+				avatar: req.file.filename	
 			},
 			{
 			 where: {
-				id: req.params.id}, 
+				id: (req.session.userLogged).id
+			}, 
+			}).then(()=>{
+				res.redirect('/users/profile')
 			})
-			res.redirect('/users/profile')
+	},
+	destroy: (req, res) => {
+		db.Users.destroy({
+			where: {id: (req.session.userLogged).id }
+		   })
+		   // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+			res.clearCookie('userEmail'); 
+			req.session.destroy();
+            return res.redirect('/')})
+        .catch(error => res.send(error)) 
 	}
 }
 

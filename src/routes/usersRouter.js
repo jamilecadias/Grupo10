@@ -26,7 +26,7 @@ const validations = [
     //body('tel').isLength({ min: 8, max:12 }).withMessage('Debe tener entre 8 y 12 digitos.'),//
     body('password').notEmpty().withMessage('Dede ingresar una contraseña').bail()
     .isLength(({ min: 8 })).withMessage('La contraseña debe tener al menos 8 caracteres.'),
-    body('profileImage').custom((value , {req}) => {
+    body('avatar').custom((value , {req}) => {
         let file = req.file; 
         let acceptedExtensions = ['.jpg' , '.gif' , '.png', '.jpeg'];
         if (!file){
@@ -51,12 +51,13 @@ router.post('/login', usersController.processLogin);
 
 // Registro
 router.get('/register', guestMiddleware, usersController.register); // Acceso vista
-router.post('/register' , uploadUser.single('profileImage') , validations, usersController.processUsersRegister) // Procesamiento
+router.post('/register' , uploadUser.single('avatar') , validations, usersController.processUsersRegister) // Procesamiento
 
 // Profile
 router.get('/profile',authMiddleware, usersController.profile);
 router.get('/edit/:id', usersController.edit);
-router.put('/edit/:id', usersController.update)
+router.post('/edit/:id',uploadUser.single('avatar') ,  usersController.update)
+router.delete('/delete/:id' , usersController.destroy)
 
 
 

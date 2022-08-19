@@ -29,14 +29,12 @@
             <form action='/users/edit/<%= user.id %>' method="get" style="display: inline-flex">
                 <button class="profileButton2" type="submit" >Editar</button>
             </form>
+            <form action='/users/delete/<%= user.id %>?_method=DELETE' method="post" style="display: inline-flex">
+                    <button class="profileButton2" type="submit" >Eliminar</button>
+                </form>
             </div> 
     </main>
         
-
-
-
-
-
     <%- include ('../partials/footer.ejs')%>
     
 </body>
