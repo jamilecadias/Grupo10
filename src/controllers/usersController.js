@@ -171,13 +171,13 @@ const usersController = {
 			{
 				name: req.body.name,
 				tel: req.body.tel,
-				avatar: req.file.filename	
+				//avatar: req.file.filename	
 			},
 			{
 			 where: {id: req.params.id}, force: true
 			})
 			.then (user =>
-				res.redirect('../views/users/profile') 
+				res.redirect('/users/profile') 
 				)
 			.catch(error => res.send(error))
 					},
