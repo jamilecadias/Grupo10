@@ -65,7 +65,7 @@ const productsController = {
 				origin_id: req.body.origin,
 				price: req.body.price,
 				description: req.body.description,
-				//image: req.file.filename
+				image: req.file.filename
 			},
 			{
 			 where: {id: req.params.id}, force: true
