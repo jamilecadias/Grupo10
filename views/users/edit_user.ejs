@@ -8,38 +8,30 @@
  
    <!--Formulario de registro de la pagina-->
     <main>  
-   <form action="/users/<%= userToEdit.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
+    <form action="/users/edit/<%= userToEdit.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
            <div>
        <h1 id="titulo">Editar perfil</h1>
-   </div>
-   <fieldset class="grupo"> 
-    
-   <!-- <div class="campo">
+    </div>
+    <fieldset class="grupo"> 
+    <!-- <div class="campo">
         <label class="imagen-producto"><strong>Elegí tu foto de perfil</strong></label>
         <input type="file" name="avatar">
-        </div>
-    -->
+        </div>-->
     <div class="campo">
        <label for="nombre"><strong>Nombre:</strong></label>
-       <input type="text" name="name" id="nombre" value="<%= userToEdit.name %>">
-   </div>  
-    
-     <br>
-
-      <div class="campo">
+       <input type="text" name="name" id="nombre" value="<%=userToEdit.name%>">
+    </div>  
+    <br>
+    <div class="campo">
        <label ><strong>Teléfono:</strong></label>
        <input name="tel"  value= "<%= userToEdit.tel %>">
-     </div>
-
-
-      
-
-   <div>
+    </div>
+    <div>
        <button  type="submit" class="boton">GUARDAR</button>
-   </div>
-</fieldset>
-   </main>
-       </form>
+    </div>
+    </fieldset>
+    </main>
+    </form>
  
        <!--Footer del formulario de registro de la pagina -->
  

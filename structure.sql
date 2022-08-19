@@ -96,7 +96,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (10,'Nicolas','nico@dh.com',554846656,'$2a$10$2R0BC6zS4.vol9P0hMuRQeyNRR4wKFmyC6Q516NP8sB6e1d0jyewK','user-1660792226096.png'),(11,'Cosme Fulanito','cosmefulanito@dh.com',54632214,'$2a$10$IrG1cwiS1M9MRegacbeWHuDr74jopMqQ4Zb7xBCesNu9FlSWarYN.','user-1660825734888.png'),(12,'Lionel Messi','lionelmessi@dh.com',787887545,'$2a$10$MOMXWRRvm.Cy3E1dX5TI2OcvOy6WRMRZaQgv1VCLxDUwFEQ2E1AFy','user-1660825786019.jpg'),(13,'Dustin Henderson','dustin@dh.com',0,'$2a$10$Gt24KbfXljIAAn3uCktFbOwOos.CsrilyUR//DuB.wKY4GO6sDY7i','user-1660825829105.gif'),(14,'Gatito','gatito@dh.com',0,'$2a$10$p0HQZpIB5sssMGkKREXaWO84KTQKnQ/J4eDMK5H87FVsCItBaYSgS','user-1660829950729.jpg');
+INSERT INTO `users` VALUES (10,'Nicolas','nico@dh.com',1234567890,'$2a$10$2R0BC6zS4.vol9P0hMuRQeyNRR4wKFmyC6Q516NP8sB6e1d0jyewK','user-1660792226096.png'),(11,'Cosme Fulanito','cosmefulanito@dh.com',54632214,'$2a$10$IrG1cwiS1M9MRegacbeWHuDr74jopMqQ4Zb7xBCesNu9FlSWarYN.','user-1660825734888.png'),(12,'Lionel Messi','lionelmessi@dh.com',787887545,'$2a$10$MOMXWRRvm.Cy3E1dX5TI2OcvOy6WRMRZaQgv1VCLxDUwFEQ2E1AFy','user-1660825786019.jpg'),(13,'Dustin Henderson','dustin@dh.com',0,'$2a$10$Gt24KbfXljIAAn3uCktFbOwOos.CsrilyUR//DuB.wKY4GO6sDY7i','user-1660825829105.gif'),(14,'Gatito','gatito@dh.com',0,'$2a$10$p0HQZpIB5sssMGkKREXaWO84KTQKnQ/J4eDMK5H87FVsCItBaYSgS','user-1660829950729.jpg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -109,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-18 19:02:54
+-- Dump completed on 2022-08-19  9:59:07

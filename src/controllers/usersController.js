@@ -174,15 +174,12 @@ const usersController = {
 				//avatar: req.file.filename	
 			},
 			{
-			 where: {id: req.params.id}, force: true
+			 where: {
+				id: req.params.id}, 
 			})
-			.then (user =>
-				res.redirect('/users/profile') 
-				)
-			.catch(error => res.send(error))
-					},
+			res.redirect('/users/profile')
+	}
 }
-	
 
 
 

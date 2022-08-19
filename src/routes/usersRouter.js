@@ -56,7 +56,7 @@ router.post('/register' , uploadUser.single('profileImage') , validations, users
 // Profile
 router.get('/profile',authMiddleware, usersController.profile);
 router.get('/edit/:id', usersController.edit);
-router.put('/:id', usersController.update)
+router.put('/edit/:id', usersController.update)
 
 
 
