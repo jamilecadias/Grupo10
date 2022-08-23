@@ -33,4 +33,8 @@ router.get('/edit/:id', productsController.edit); // Acceso vista
 router.put('/edit/:id',uploadProduct.single('image'), productsController.update);  //Envío
 router.delete('/:id', productsController.destroy); // Eliminar
 
+//Formulario de Búsqueda
+
+router.post("/search",productsController.search)
+
 module.exports = router; 
