@@ -15,11 +15,11 @@
     <fieldset class="grupo"> 
     <div class="campo">
         <label class="imagen-producto"><strong>Elegí tu foto de perfil</strong></label>
-        <input type="file" name="avatar">
+        <input type="file" name="avatar" required>
         </div>
     <div class="campo">
        <label for="nombre"><strong>Nombre:</strong></label>
-       <input type="text" name="name" id="nombre" value="<%=userToEdit.name%>">
+       <input type="text" name="name" id="nombre" value="<%=userToEdit.name%>" required>
     </div>  
     <br>
     <div class="campo">
