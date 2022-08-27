@@ -9,7 +9,7 @@ let db = require("../database/models")
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));*/
 
 const usersController = {
-	fileName : ('../src/data/users.json'),
+	//fileName : ('../src/data/users.json'),
 
    	login: (req, res)=>{
         res.render('./users/login')
@@ -29,13 +29,22 @@ const usersController = {
 		 } 	
 		if (req.body.password == req.body.confirmPassword){
 			let contrasena = req.body.password;
-		db.Users.create({
-				name: req.body.name,
-				email: req.body.email,
-				tel: req.body.tel,
+			let userToCreate = {
+				...req.body, 
 				password: bcryptjs.hashSync(contrasena,10),
 				avatar: req.file.filename
-		}).then(usuario => res.redirect ('/users/login'))
+			}
+			db.Users.create(userToCreate)
+			.then(()=>{
+				res.redirect('/users/login')
+			})
+		// db.Users.create({
+		// 		name: req.body.name,
+		// 		email: req.body.email,
+		// 		tel: req.body.tel,
+		// 		password: bcryptjs.hashSync(contrasena,10),
+		// 		avatar: req.file.filename
+		// }).then(usuario => res.redirect ('/users/login'))
 		.catch(error => res.render('../views/users/register' , {
 			errors: {
 				email : {
