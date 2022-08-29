@@ -86,3 +86,23 @@
  
 **5. Dejar de hacer.**
 - Quedarnos con dudas que afecten al desarrollo del sprint.
+
+## Sprint 5
+**1. Comenzar a hacer.**
+- Registro de la weekly.
+- División de tareas. 
+
+**2. Hacer más.**
+- Comprometerse con el proyecto. 
+- Respetar las fechas parciales de avances. 
+
+**3. Continuar haciendo.**
+- Sacarse dudas con los profesores.
+ 
+**4. Hacer menos.**
+
+
+**5. Dejar de hacer.**
+
+
+
