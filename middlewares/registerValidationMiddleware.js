@@ -4,7 +4,10 @@ const { body } = require('express-validator');
 const validations = [
     body('name')
         .notEmpty()
-        .withMessage('Este campo debe estar completo.'),
+        .withMessage('Este campo debe estar completo.')
+        .bail()
+        .isLength(({ min: 2 }))
+        .withMessage('El debe tener al menos 8 caracteres.'),
     body('email')
         .notEmpty()
         .withMessage('Este campo debe estar completo.')
@@ -14,7 +17,7 @@ const validations = [
     //body('tel').isLength({ min: 8, max:12 }).withMessage('Debe tener entre 8 y 12 digitos.'),//
     body('password')
         .notEmpty()
-        .withMessage('Dede ingresar una contraseña')
+        .withMessage('Debe ingresar una contraseña')
         .bail()
         .isLength(({ min: 8 }))
         .withMessage('La contraseña debe tener al menos 8 caracteres.'),
