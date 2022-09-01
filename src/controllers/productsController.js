@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 let db = require("../database/models");
 const { Console } = require('console');
+const { validationResult } = require('express-validator');
 const Op = db.Sequelize.Op
 
 /*const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -32,6 +33,15 @@ const productsController = {
     },
 
 	store: (req, res)=> {
+
+		const resultValidation = validationResult(req); 
+
+			if (resultValidation.errors.length > 0){
+				return res.render('./cargar_productos' , {
+					errors : resultValidation.mapped(),
+					oldData: req.body
+				})
+			 } 	
 			db.Products.create({
 				 name: req.body.name,
 				 origin_id: req.body.origin,
@@ -42,6 +52,10 @@ const productsController = {
 			.catch(error => res.send(error))
 		
 		},   
+
+					
+
+
 
     edit: (req,res)=>{
 
@@ -60,7 +74,18 @@ const productsController = {
 		)}, 
 
     update: (req, res) => {
-		db.Products.update(
+
+
+		const resultValidation = validationResult(req); 
+
+			if (resultValidation.errors.length > 0){
+				return res.render('./editar_productos' , {
+					errors : resultValidation.mapped(),
+					oldData: req.body
+				})
+			 } 	
+			
+			 db.Products.update(
 			{
 				name: req.body.name,
 				origin_id: req.body.origin,
@@ -72,7 +97,7 @@ const productsController = {
 			 where: {id: req.params.id}, force: true
 			})
 			.then (() =>
-				res.redirect('/products') 
+				res.redirect('/products',) 
 				)
 			.catch(error => res.send(error))
 
