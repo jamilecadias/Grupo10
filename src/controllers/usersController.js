@@ -156,8 +156,12 @@ const usersController = {
 
 	
 	profile: (req, res)=> {
-		res.render('../views/users/profile' , {
-			user: req.session.userLogged
+		db.Users.findByPk(req.session.userLogged.id, {raw : true})
+		.then ( ({id, name, email, tel, avatar}) => {
+			const user = {id, name, email, tel, avatar}
+			res.render('../views/users/profile' , {
+			user
+		})
 		})
 	},
 
