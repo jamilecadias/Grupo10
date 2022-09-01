@@ -29,11 +29,11 @@ router.get('/detail/:id', productsController.detail);
 
 // Formulario de creación
 router.get('/create', productsController.create); // Acceso vista
-router.post('/', uploadProduct.single('image'),productsValidation,  productsController.store); // Procesamiento
+router.post('/', uploadProduct.single('image'), productsValidation,  productsController.store); // Procesamiento
 
 // Formulario de edición
 router.get('/edit/:id', productsController.edit); // Acceso vista
-router.put('/edit/:id',uploadProduct.single('image'),productsValidation,  productsController.update);  //Envío
+router.put('/edit/:id',productsValidation,  productsController.update);  //Envío  uploadProduct.single('image'),
 router.delete('/:id', productsController.destroy); // Eliminar
 
 //Formulario de Búsqueda
