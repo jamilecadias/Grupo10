@@ -16,7 +16,7 @@
    <fieldset class="grupo"> 
       <div class="campo">
        <label for="nombre"><strong>Nombre del producto:</strong></label>
-       <input type="text" name="name" id="nombre" value="<%= productToEdit.name %>">
+       <input type="text" name="name" id="nombre" >
        <% if (locals.errors && errors.name) { %>
         <div class="text-danger"> <%= errors.name.msg %> </div>
         <% } %>
@@ -73,3 +73,5 @@
 </body>
 
 </html>
+
+<!--value= "<%= productToEdit.name %>" -->

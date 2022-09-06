@@ -14,17 +14,24 @@
                 <form action="/users/login" method="POST" class="create-form">
                 <div class="control-form"> 
                     <label>E-mail</label>
-                    <input type="text" name="email" class="control" placeholder="Ej: tunombre@email.com ">
+                    <input type="text" name="email" class="control" placeholder="Ej: tunombre@email.com " value = "<%= locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) {%>
+                        <div class="text-danger">
+                            <%= errors.email.msg %></div>
+                        <% }%>
                 </div>
                 
-                <% if (locals.errors && errors.email) {%>
-                    <div class="text-danger">
-                        <%= errors.email.msg %></div>
-                    <% }%>
+                
                 
                 <div class="control-form"> 
                     <label>Contraseña</label>
                     <input type="password" name="password" class="control" placeholder="********">
+
+                    <% if (locals.errors && errors.password) {%>
+                        <div class="text-danger">
+                            <%= errors.password.msg %></div>
+                        <% }%>
+
                     <span class="error">La contraseña debe tener al menos 8 caracteres</span>
                     
                 </div>

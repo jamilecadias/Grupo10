@@ -6,11 +6,12 @@ const usersController = require('../controllers/usersController');
 const guestMiddleware = require ('../../middlewares/guestMiddleware'); 
 const authMiddleware = require ('../../middlewares/authMiddleware'); 
 const registerValidation = require('../../middlewares/registerValidationMiddleware');
+const loginValidation = require('../../middlewares/loginValidationMiddleware')
 const uploadUser = require('../../middlewares/multerUserMiddleware');
 
 // Formulario de login
 router.get('/login',guestMiddleware, usersController.login);
-router.post('/login', usersController.processLogin); 
+router.post('/login',loginValidation, usersController.processLogin); 
 
 // Registro
 router.get('/register', guestMiddleware, usersController.register); // Acceso vista
