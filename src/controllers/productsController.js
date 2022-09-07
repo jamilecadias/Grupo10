@@ -55,10 +55,6 @@ const productsController = {
 
 	},
 
-
-
-
-
 	edit: (req, res) => {
 
 		db.Products.findByPk(req.params.id)
@@ -77,17 +73,8 @@ const productsController = {
 	},
 
 	update: (req, res) => {
-
-
-
-
-
-
-
-
 		db.Products.findByPk(req.params.id)
 			.then((product) => {
-
 				const resultValidation = validationResult(req);
 				if (resultValidation.errors.length > 0) {
 					return res.render('./editar_productos', {
@@ -96,7 +83,6 @@ const productsController = {
 						productToEdit: product
 					})
 				} else {
-
 					let productToEdit = {
 						...req.body,
 						//image: req.file.filename
@@ -104,24 +90,17 @@ const productsController = {
 					db.Products.update(
 						productToEdit,
 						{
-							where: { id: product.id }
+							where: { id: productToEdit.id }
 						}
 					)
 						.then(() =>
 							res.redirect('/products')
 						)
 						.catch(error => res.send(error))
-
-
 				}
 			})
 
 	},
-
-
-
-
-
 	//  db.Products.update(
 	// {
 	// 	name: req.body.name,
@@ -133,8 +112,6 @@ const productsController = {
 	// {
 	//  where: {id: req.params.id}, force: true
 	// })
-
-
 	/*let id = productToEdit.id;
 	for (let i=0; i<products.length; i++) {
 		if (products[i].id == id) {
@@ -147,7 +124,6 @@ const productsController = {
 
 	//fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8'); /*
 
-
 	destroy: (req, res) => {
 		db.Products.destroy({
 		where: { id: req.params.id }
@@ -158,7 +134,6 @@ const productsController = {
 		return res.redirect('/products')
 	})
 	.catch(error => res.send(error))
-
 		// let id = req.params.id;
 		// console.log(id);
 		// products = products.filter(function(product){
@@ -169,7 +144,6 @@ const productsController = {
 	},
 
 search: (req, res) => {
-
 	db.Products.findAll({
 		where: {
 			name: {
@@ -177,15 +151,11 @@ search: (req, res) => {
 			}
 		}
 	})
-
-
-		.then(function (products) {
+	.then(function (products) {
 			res.render('./products/lista_productos', { products })
 		})
 
 }
 }
-
-
 
 module.exports = productsController;
