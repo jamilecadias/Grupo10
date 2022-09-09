@@ -33,7 +33,7 @@ router.post('/', uploadProduct.single('image'), productsValidation,  productsCon
 
 // Formulario de edición
 router.get('/edit/:id', productsController.edit); // Acceso vista
-router.put('/edit/:id',productsValidation,  productsController.update);  //Envío  uploadProduct.single('image'),
+router.put('/edit/:id', productsValidation , productsController.update);  //Envío  , uploadProduct.single('image')
 router.delete('/:id', productsController.destroy); // Eliminar
 
 //Formulario de Búsqueda

@@ -77,44 +77,67 @@ const productsController = {
 	},
 
 	update: (req, res) => {
+		const id = req.params.id;
+		const validation = validationResult(req);
+		const { name, price, description } = req.body;
 
-
-
-
-
-
-
-
-		db.Products.findByPk(req.params.id)
-			.then((product) => {
-
-				const resultValidation = validationResult(req);
-				if (resultValidation.errors.length > 0) {
-					return res.render('./editar_productos', {
-						errors: resultValidation.mapped(),
-						oldData: req.body,
-						productToEdit: product
-					})
-				} else {
-
-					let productToEdit = {
-						...req.body,
-						//image: req.file.filename
-					}
-					db.Products.update(
-						productToEdit,
-						{
-							where: { id: product.id }
-						}
-					)
-						.then(() =>
-							res.redirect('/products')
-						)
-						.catch(error => res.send(error))
-
-
+		console.log(validation.errors);
+		if(validation.errors.length > 0) {
+			return res.redirect(`/products/edit/${id}`);
+		} else {
+			db.Products.update(
+				{
+					name,
+					price,
+					description
+				},
+				{
+					where: {id}
 				}
+			).then(() => {
+				res.redirect('/products')
+			}).catch( err => {
+				console.log(err);
+				res.send(err);
 			})
+		}
+
+			
+
+		
+
+
+
+		// db.Products.findByPk(req.params.id)
+		// 	.then((product) => {
+
+		// 		const resultValidation = validationResult(req);
+		// 		if (resultValidation.errors.length > 0) {
+		// 			return res.render('./editar_productos', {
+		// 				errors: resultValidation.mapped(),
+		// 				oldData: req.body,
+		// 				productToEdit: product
+		// 			})
+		// 		} else {
+
+		// 			let productToEdit = {
+		// 				...req.body,
+		// 				//image: req.file.filename
+		// 			}
+		// 			db.Products.update(
+		// 				productToEdit,
+		// 				{
+		// 					where: { id: product.id }
+		// 				}
+		// 			)
+		// 				.then(() =>
+		// 					res.redirect('/products')
+		// 				)
+		// 				.catch(error => res.send(error))
+
+
+		// 		}
+		// 	})
 
 	},
 

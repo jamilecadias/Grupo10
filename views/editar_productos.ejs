@@ -8,63 +8,63 @@
  
    <!--Formulario de registro de la pagina-->
     <main>  
-   <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
-           <div>
-       <h1 id="titulo">Editar producto</h1>
-      <!-- <p id="subtitulo">Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>-->
-   </div>
-   <fieldset class="grupo"> 
-      <div class="campo">
-       <label for="nombre"><strong>Nombre del producto:</strong></label>
-       <input type="text" name="name" id="nombre" >
-       <% if (locals.errors && errors.name) { %>
-        <div class="text-danger"> <%= errors.name.msg %> </div>
-        <% } %>
-   </div>
-  
-     <div class="campo">
-       <label for="precio"><strong>Precio:</strong></label>
-       <input type="number" name="price" id="precio" value="<%= productToEdit.price %>"> 
-       <% if (locals.errors && errors.price) { %>
-        <div class="text-danger"> <%= errors.price.msg %> </div>
-        <% } %>
-     </div>
-     <br>
+        <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST" class="create-form">
+            <div>
+                <h1 id="titulo">Editar producto</h1>
+                <!-- <p id="subtitulo">Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>-->
+            </div>
+            <fieldset class="grupo"> 
+                    <div class="campo">
+                        <label for="nombre"><strong>Nombre del producto:</strong></label>
+                        <input type="text" name="name" id="nombre" value="<%= productToEdit.name %>" />
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="text-danger"> <%= errors.name.msg %> </div>
+                        <% } %>
+                    </div>
+            
+                    <div class="campo">
+                        <label for="precio"><strong>Precio:</strong></label>
+                        <input type="number" name="price" id="precio" value="<%= productToEdit.price %>" /> 
+                        <% if (locals.errors && errors.price) { %>
+                            <div class="text-danger"> <%= errors.price.msg %> </div>
+                        <% } %>
+                    </div>
+                    <br>
 
-      <div class="campo">
-       <label for="descripción"><strong>Descripción:</strong></label>
-       <textarea name="description" id="descripción" ? ><%= productToEdit.description %></textarea>
-       <% if (locals.errors && errors.description) { %>
-        <div class="text-danger"> <%= errors.description.msg %> </div>
-        <% } %>
-     </div>
+                    <div class="campo">
+                        <label for="descripción"><strong>Descripción:</strong></label>
+                        <textarea name="description" id="descripción" ? ><%= productToEdit.description %></textarea>
+                        <% if (locals.errors && errors.description) { %>
+                            <div class="text-danger"> <%= errors.description.msg %> </div>
+                        <% } %>
+                    </div>
 
-    <!-- <div class="campo">
-        <label class="imagen-caracteristicas"><strong>Características:</strong></label>
-        <input type="file" name="features">
-        <div id="imagen">
-            <img id="imagencaracteristicas" src="/images/Caracteristicas.PNG" alt="Café juan Valdéz">
-        </div> -->
-        </div>
+                    <!-- <div class="campo">
+                    <label class="imagen-caracteristicas"><strong>Características:</strong></label>
+                    <input type="file" name="features">
+                    <div id="imagen">
+                        <img id="imagencaracteristicas" src="/images/Caracteristicas.PNG" alt="Café juan Valdéz">
+                    </div> 
+                    </div>-->
 
-     <div class="campo">
-        <label class="imagen-producto"><strong>Elegí la foto del producto</strong></label>
-        <input type="file" name="image" >
-        <% if (locals.errors && errors.image) { %>
-            <div class="text-danger"> <%= errors.image.msg %> </div>
-            <% } %>
-        <div id="imagen">
-            <!--<img id="imagenproducto" src="/images/juan_valdez.jpg" alt="Café juan Valdéz">-->
-        </div>
-        </div>
- 
-   <div>
-       <button  type="submit" class="boton">GUARDAR</button>
-       <button  type="reset" class="boton">BORRAR</button>
-   </div>
-</fieldset>
-   </main>
-       </form>
+                    <div class="campo">
+                        <label class="imagen-producto"><strong>Elegí la foto del producto</strong></label>
+                        <input type="file" name="image" />
+                        <% if (locals.errors && errors.image) { %>
+                            <div class="text-danger"> <%= errors.image.msg %> </div>
+                        <% } %>
+                        <div id="imagen">
+                            <!--<img id="imagenproducto" src="/images/juan_valdez.jpg" alt="Café juan Valdéz">-->
+                        </div>
+                    </div>
+            
+                    <div>
+                        <button  type="submit" class="boton">GUARDAR</button>
+                        <button  type="reset" class="boton">BORRAR</button>
+                    </div>
+            </fieldset>
+        </form>
+    </main>
  
        <!--Footer del formulario de registro de la pagina -->
  
