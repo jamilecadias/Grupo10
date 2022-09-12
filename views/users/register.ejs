@@ -2,8 +2,10 @@
 <html lang="en">
     <%- include ('../partials/head.ejs')%>
     <link rel="stylesheet" href="../css/styles_registro.css">
+    
 <body>
     <%- include ('../partials/header.ejs')%>
+    <script src = "/js/userRegister.js"> </script>
  
    <!--Formulario de registro de la pagina-->
    <!--<% if (locals.errors){ %>
@@ -18,7 +20,11 @@
        <p id="subtitulo">Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</p>
    </div>
    <fieldset class="grupo"> 
+
     <div class="campo">
+        <div class="errores">
+            <ul class="ulErrores">  </ul>
+        </div>
         <label for="profileImage"><strong>Elegí una foto de perfil:</strong></label>
         <input type="file" name="avatar" id="profileImage">
         <% if (locals.errors && errors.avatar) { %>
@@ -28,11 +34,7 @@
     <div class="campo">
        <label for="nombre"><strong>Nombre y Apellido:</strong></label>
        <input 
-       type="text" 
-       name="name" 
-       id="nombre" 
-       placeholder="Ej.: Juan Valdéz"
-       value = "<%= locals.oldData ? oldData.name : null %>">
+       type="text" name="name" id="nombre" placeholder="Ej.: Juan Valdéz" value = "<%= locals.oldData ? oldData.name : null %>">
    </div>
    <% if (locals.errors && errors.name) {%>
   <div class="text-danger"><%= errors.name.msg %>  </div>
@@ -41,11 +43,7 @@
     <div class="campo">
        <label for="email"><strong>E-mail:</strong></label>
        <input 
-       type="text" 
-       name="email" 
-       id="email" 
-       placeholder="Ej.: tunombre@email.com"
-       value = "<%= locals.oldData ? oldData.email : null %>">
+       type="text" name="email" id="email" placeholder="Ej.: tunombre@email.com"value = "<%= locals.oldData ? oldData.email : null %>">
      </div>
      <% if (locals.errors && errors.email) {%>
         <div class="text-danger"><%= errors.email.msg %>  </div>
@@ -53,11 +51,7 @@
      <div class="campo">
        <label for="telefono"><strong>Telefono (opcional):</strong></label>
        <input 
-       type="text" 
-       name="tel" 
-       id="telefono" 
-       placeholder="Ej.: 1123456789"
-       value = "<%= locals.oldData ? oldData.tel : null %>">
+       type="text" name="tel" id="telefono" placeholder="Ej.: 1123456789" value = "<%= locals.oldData ? oldData.tel : null %>">
      </div>
      <% if (locals.errors && errors.tel) {%>
         <div class="text-danger"><%= errors.tel.msg %>  </div>
@@ -65,14 +59,14 @@
 
      <div class="campo">
          <label for="contraseña"><strong>Contraseña:</strong></label>
-         <input type="password" name="password" id="contraseña" placeholder="**********">
+         <input type="password" name="password" id="contrasenia" placeholder="**********">
          </div>
       <% if (locals.errors && errors.password) {%>
         <div class="text-danger"><%= errors.password.msg %>  </div>
         <% } %>
       <div class="campo">
            <label for="contraseña"><strong>Confirmar contraseña:</strong></label>
-           <input type="password" name="confirmPassword" id="contraseña" placeholder="**********">
+           <input type="password" name="confirmPassword" id="confirmarContrasenia" placeholder="**********">
            
        </div>
    <div>
@@ -91,6 +85,7 @@
        <!--Footer del formulario de registro de la pagina -->
  
        <%- include ('../partials/footer.ejs')%>
+       
     
 </body>
 
